@@ -13,16 +13,14 @@ const config: Config = {
       },
       colors: {
         // darkmode
-        "primary-dark": "#FEFEFE",
-        "secondary-dark": "#888888",
+        "primary-dark": "#F3F4F6",
+        "secondary-dark": "#E5E7EB",
         // lightmode
-        "primary-light": "#16161A",
-        "secondary-light": "#27374D",
+        "primary-light": "#1F2937",
+        "secondary-light": "#374151",
         // gradient
-        "primary-gradient": "#b3ffab",
-        "secondary-gradient": "#12fff7",
-        //
-        "banana-yellow": "#FFE233",
+        "primary-gradient": "#B3FFAB",
+        "secondary-gradient": "#12FFF7",
       },
       keyframes: {
         wave: {
