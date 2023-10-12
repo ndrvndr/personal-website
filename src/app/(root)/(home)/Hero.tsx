@@ -5,7 +5,7 @@ import { SiGmail } from "react-icons/si";
 
 export default function Hero() {
   return (
-    <section>
+    <section className="mb-8">
       <h1
         className={clsx(
           "primary",

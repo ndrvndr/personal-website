@@ -5,7 +5,7 @@ import { MdOutlineWorkHistory } from "react-icons/md";
 
 export default function Career() {
   return (
-    <section>
+    <section className="mb-8">
       <div className="mb-2 flex items-center gap-2">
         <MdOutlineWorkHistory size={20} />
         <h2 className="primary text-xl font-medium">Career</h2>

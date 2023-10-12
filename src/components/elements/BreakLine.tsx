@@ -1,10 +1,15 @@
 import clsx from "clsx";
 
-export default function BreakLine() {
+export default function BreakLine({
+  decoration = "solid",
+}: {
+  decoration?: string;
+}) {
   return (
     <div
       className={clsx(
-        "mb-6 mt-8 border-b border-solid",
+        `border-${decoration}`,
+        "mb-6 mt-6 border-b",
         "border-secondary-light dark:border-secondary-dark",
       )}
     />
