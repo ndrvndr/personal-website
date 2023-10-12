@@ -8,8 +8,8 @@ export default function Stacks() {
     STACKS,
   ).sort(() => Math.random() - 0.5);
   return (
-    <section className="mb-16">
-      <div className="mb-6 flex items-center gap-2">
+    <section>
+      <div className="primary mb-3 flex items-center gap-2">
         <HiOutlineCode size={20} />
         <h2 className="text-xl font-medium">Stacks</h2>
       </div>

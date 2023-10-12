@@ -1,43 +1,52 @@
 "use client";
-import { BsCloudSunFill } from "react-icons/bs";
-import { bottombaritems } from "@/contants/bottombar";
+import { BOTTOMBAR_ITEMS } from "@/contants/bottombar";
 import clsx from "clsx";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
+import ThemeButton from "../elements/ThemeButton";
 
 export default function Bottombar() {
   const pathname = usePathname();
+
   return (
     <nav
       className={clsx(
-        "fixed bottom-4 left-1/2 -translate-x-1/2 bg-red-500",
+        "border__color",
+        "fixed bottom-4 left-1/2 -translate-x-1/2",
+        "shadow-md backdrop-blur-3xl",
         "flex items-center gap-1",
         "rounded-full p-2",
         "z-20",
       )}
     >
-      {bottombaritems.map((item, index) => {
+      {BOTTOMBAR_ITEMS.map((item, index) => {
         const isActivePage = pathname === item.pathname;
         return (
-          <div
+          <Link
             key={index}
+            href={item.pathname}
             className={clsx(
               "h-10 w-10 rounded-full",
               "grid place-items-center",
-              isActivePage && "bg-white",
+              isActivePage && "bg-gradient-linear ",
             )}
           >
-            {item.icon}
-          </div>
+            <span className={isActivePage ? "text-primary-light" : "primary"}>
+              {item.icon}
+            </span>
+          </Link>
         );
       })}
 
-      <div className={clsx("border-r border-solid border-black", "mx-2 h-6")} />
-
       <div
-        className={clsx("h-10 w-10 rounded-full ", "grid place-items-center")}
-      >
-        <BsCloudSunFill size={24} color="white" />
-      </div>
+        className={clsx(
+          "mx-2 h-6",
+          "border-r border-solid border-secondary-light",
+          "dark:border-secondary-dark",
+        )}
+      />
+
+      <ThemeButton />
     </nav>
   );
 }

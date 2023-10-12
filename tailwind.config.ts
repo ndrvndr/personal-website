@@ -11,6 +11,19 @@ const config: Config = {
       backgroundImage: {
         "gradient-linear": "linear-gradient(to right, #b3ffab, #12fff7);",
       },
+      colors: {
+        // darkmode
+        "primary-dark": "#FEFEFE",
+        "secondary-dark": "#888888",
+        // lightmode
+        "primary-light": "#16161A",
+        "secondary-light": "#27374D",
+        // gradient
+        "primary-gradient": "#b3ffab",
+        "secondary-gradient": "#12fff7",
+        //
+        "banana-yellow": "#FFE233",
+      },
       keyframes: {
         wave: {
           "0%": { transform: "rotate(0.0deg)" },
@@ -59,8 +72,12 @@ const config: Config = {
         "slide-infinite": "slideInfinite 100s linear infinite",
         "rain-arrow": "rainArrow 1s ease-out infinite",
       },
+      cursor: {
+        pointer: "url(/new-tab.png), pointer",
+      },
     },
   },
   plugins: [],
+  darkMode: "class",
 };
 export default config;

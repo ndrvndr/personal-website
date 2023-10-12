@@ -1,13 +1,15 @@
 import { AiOutlineHome } from "react-icons/ai";
-import { SiAboutdotme } from "react-icons/si";
-import { GoProjectSymlink } from "react-icons/go";
-import { TbWriting } from "react-icons/tb";
 import { FaRegPaperPlane } from "react-icons/fa";
+import { GoProjectSymlink } from "react-icons/go";
+import { SiAboutdotme } from "react-icons/si";
+import { TbWriting } from "react-icons/tb";
 
-export const bottombaritems = [
-  { icon: <AiOutlineHome size={24} />, pathname: "/" },
-  { icon: <SiAboutdotme size={24} />, pathname: "/about" },
-  { icon: <GoProjectSymlink size={24} />, pathname: "/project" },
-  { icon: <TbWriting size={24} />, pathname: "/blog" },
-  { icon: <FaRegPaperPlane size={24} />, pathname: "/contact" },
+const ICON_SIZE: number = 24;
+
+export const BOTTOMBAR_ITEMS = [
+  { icon: <AiOutlineHome size={ICON_SIZE} />, pathname: "/" },
+  { icon: <SiAboutdotme size={ICON_SIZE} />, pathname: "/about" },
+  { icon: <GoProjectSymlink size={ICON_SIZE} />, pathname: "/project" },
+  { icon: <TbWriting size={ICON_SIZE} />, pathname: "/blog" },
+  { icon: <FaRegPaperPlane size={ICON_SIZE} />, pathname: "/contact" },
 ];

@@ -10,7 +10,7 @@ export default function MarqueeElement({
   direction = "left",
 }: MarqueeElementProps) {
   return (
-    <Marquee direction={direction} speed={25} className="py-3">
+    <Marquee direction={direction} speed={75} className="py-3">
       {children}
     </Marquee>
   );

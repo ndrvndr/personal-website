@@ -7,13 +7,14 @@ import Career from "./Career";
 export default function Home() {
   return (
     <main>
-      <div className="p-8">
+      <div className="px-8 pt-6">
         <Header />
         <Hero />
         <BreakLine />
         <Career />
         <BreakLine />
         <Stacks />
+        <BreakLine />
       </div>
     </main>
   );

@@ -131,3 +131,33 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+@layer components {
+  .gradient__text {
+    @apply bg-gradient-linear text-black dark:bg-clip-text dark:text-transparent;
+  }
+
+  .primary {
+    @apply text-primary-light dark:text-primary-dark;
+  }
+
+  .primary__reverse {
+    @apply text-primary-dark dark:text-primary-light;
+  }
+
+  .secondary {
+    @apply text-secondary-light dark:text-secondary-dark;
+  }
+
+  .secondary__reverse {
+    @apply text-secondary-dark dark:text-secondary-light;
+  }
+
+  .secondary--hover {
+    @apply lg:hover:text-primary-light lg:dark:hover:text-primary-dark;
+  }
+
+  .border__color {
+    @apply border border-solid border-secondary-light dark:border-secondary-dark;
+  }
+}

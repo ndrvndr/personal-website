@@ -8,18 +8,30 @@ export default function Career() {
     <section>
       <div className="mb-2 flex items-center gap-2">
         <MdOutlineWorkHistory size={20} />
-        <h2 className="text-xl font-medium">Career</h2>
+        <h2 className="primary text-xl font-medium">Career</h2>
       </div>
 
       <Link
-        href="/"
+        href="https://res.cloudinary.com/dqqmzgesp/image/upload/v1697030578/personal-website/cv.jpg"
         target="_blank"
-        className="mb-6 flex items-center gap-3 pl-0.5 text-neutral-600 transition-all duration-300"
+        rel="noopener noreferrer"
+        className={clsx(
+          "secondary cursor-pointer",
+          "flex items-center gap-3",
+          "mb-4 pl-0.5",
+          "transition-all duration-300",
+        )}
       >
-        <div className="overflow-hidden border-b-2 border-solid border-black">
+        <div
+          className={clsx(
+            "overflow-hidden",
+            "border-b-2 border-solid",
+            "border-secondary-light dark:border-secondary-dark",
+          )}
+        >
           <BiSolidDownvote className="animate-rain-arrow" />
         </div>
-        <span>Download Resume</span>
+        <span>Download CV</span>
       </Link>
 
       <div className="space-y-4">
@@ -29,16 +41,16 @@ export default function Career() {
             className={clsx(
               "w-full px-6 py-4",
               "flex items-center justify-around",
-              "border border-solid border-gray-200",
+              "border border-solid border-gray-500",
               "animate-pulse rounded-md shadow-md",
             )}
           >
-            <div className="h-14 w-14 rounded-full bg-gray-300" />
+            <div className="h-14 w-14 rounded-full bg-gray-500" />
             <div className="flex flex-col gap-2">
-              <div className="h-4 w-32 rounded-xl bg-gray-300" />
-              <div className="h-4 w-36 rounded-xl bg-gray-300" />
-              <div className="h-4 w-24 rounded-xl bg-gray-300" />
-              <div className="h-4 w-20 rounded-xl bg-gray-300" />
+              <div className="h-4 w-32 rounded-xl bg-gray-500" />
+              <div className="h-4 w-36 rounded-xl bg-gray-500" />
+              <div className="h-4 w-24 rounded-xl bg-gray-500" />
+              <div className="h-4 w-20 rounded-xl bg-gray-500" />
             </div>
           </div>
         ))}
