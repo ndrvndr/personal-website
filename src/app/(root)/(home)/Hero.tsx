@@ -11,12 +11,12 @@ export default function Hero() {
           "primary",
           "mb-2",
           "flex items-center",
-          "text-xl font-medium",
+          "text-xl font-bold",
           "min-[347px]:text-2xl",
         )}
       >
         Hi, I&apos;m
-        <span className="gradient__text ml-2 font-bold">Andre Avindra</span>
+        <span className="gradient__text ml-2">Andre Avindra</span>
         <div className="ml-1 animate-waving-hand">👋</div>
       </h1>
 

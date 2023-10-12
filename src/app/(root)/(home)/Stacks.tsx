@@ -11,7 +11,7 @@ export default function Stacks() {
     <section>
       <div className="primary mb-3 flex items-center gap-2">
         <HiOutlineCode size={20} />
-        <h2 className="text-xl font-medium">Stacks</h2>
+        <h2 className="text-xl font-bold">Stacks</h2>
       </div>
 
       <div className="flex flex-col">
