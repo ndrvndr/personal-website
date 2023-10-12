@@ -53,7 +53,7 @@ export default function Footer() {
         </div>
       </Link>
 
-      <h2 className="mb-2 mt-4 text-center">Reach me out</h2>
+      <p className="mb-2 mt-4 text-center text-sm font-medium">Reach me out</p>
       <ul className="flex justify-center gap-4">
         {FOOTER_ITEMS.map(({ icon, href, ariaLabel }, index) => (
           <li key={index}>
@@ -69,7 +69,9 @@ export default function Footer() {
           </li>
         ))}
       </ul>
-      <p className="mt-8 text-center">copyright &copy; Andre Avindra 2023</p>
+      <p className="mt-8 text-center text-sm">
+        copyright &copy; Andre Avindra 2023
+      </p>
     </footer>
   );
 }

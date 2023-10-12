@@ -19,6 +19,7 @@ export default function Career() {
           "secondary cursor-pointer",
           "flex items-center gap-3",
           "mb-4 pl-0.5",
+          "text-sm font-bold",
           "transition-all duration-300",
         )}
       >
@@ -31,7 +32,7 @@ export default function Career() {
         >
           <BiSolidDownvote className="animate-rain-arrow" />
         </div>
-        <span>Download CV</span>
+        Download CV
       </Link>
 
       <div className="space-y-4">

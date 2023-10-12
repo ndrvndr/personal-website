@@ -11,6 +11,7 @@ export default function StackCard({ name, icon }: StackCardProps) {
       <div
         className={clsx(
           "w-full px-4 py-2",
+          "text-sm font-medium",
           "flex items-center gap-2 rounded-full",
           "border border-solid",
           "border-primary-gradient dark:border-secondary-gradient",

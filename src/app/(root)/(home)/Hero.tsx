@@ -20,12 +20,12 @@ export default function Hero() {
         <div className="ml-1 animate-waving-hand">👋</div>
       </h1>
 
-      <ul className="secondary mb-4 list-disc space-y-2 pl-4">
+      <ul className="secondary mb-4 list-disc space-y-2 pl-4 text-sm">
         <li>Front-End Web Developer</li>
         <li>I build website.</li>
       </ul>
 
-      <p className="secondary mb-4 leading-relaxed">
+      <p className="secondary mb-4 text-sm leading-relaxed">
         Working within the React ecosystem, transform ideas into digital
         realities that are easily accessible and inclusive for web users.
       </p>
@@ -37,28 +37,26 @@ export default function Hero() {
         </p>
       </div>
 
-      <div className="lg:flex lg:justify-end">
-        <Link
-          href="mailto:andreavindra37@gmail.com"
-          aria-label="Send me an email"
-          className={clsx(
-            "primary cursor-pointer",
-            "flex items-center gap-3",
-            "w-fit rounded-md p-3",
-            "font-medium",
-            "border border-solid",
-            "border-primary-gradient dark:border-secondary-gradient",
-            "border-opacity-20 dark:border-opacity-30",
-            "shadow-lg",
-            "shadow-primary-gradient dark:shadow-secondary-gradient",
-          )}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <SiGmail />
-          Contact Me
-        </Link>
-      </div>
+      <Link
+        href="mailto:andreavindra37@gmail.com"
+        aria-label="Send me an email"
+        className={clsx(
+          "primary cursor-pointer",
+          "flex items-center gap-3",
+          "w-fit rounded-md p-3",
+          "text-sm font-bold",
+          "border-t border-solid",
+          "border-primary-gradient dark:border-secondary-gradient",
+          "border-opacity-70 dark:border-opacity-30",
+          "shadow-lg",
+          "shadow-primary-gradient dark:shadow-secondary-gradient",
+        )}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <SiGmail />
+        Contact Me
+      </Link>
     </section>
   );
 }
