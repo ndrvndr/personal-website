@@ -13,11 +13,11 @@ export default function Textarea({ id, label, placeholder }: TextareaProps) {
         rows={4}
         cols={4}
         className={clsx(
-          "mt-2 w-full p-2",
+          "border__color",
           "secondary text-sm",
+          "mt-2 w-full p-2",
           "rounded-md bg-transparent",
           "placeholder:text-sm placeholder:text-neutral-500",
-          "border__color",
           "focus:outline-none",
           "md:text-base md:placeholder:text-base",
         )}

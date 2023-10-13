@@ -13,10 +13,12 @@ export default function Tag({ tag, onTagClick }: TagProps) {
     <button
       onClick={handleClick}
       className={clsx(
-        "rounded-md px-1.5 py-0.5 font-medium",
         "primary",
+        "px-1.5 py-0.5",
+        "rounded-md font-medium",
         "bg-neutral-200 dark:bg-neutral-800",
-        "disabled:cursor-not-allowed disabled:bg-opacity-20 disabled:text-opacity-20",
+        "disabled:cursor-not-allowed",
+        "disabled:bg-opacity-20 disabled:text-opacity-20",
       )}
     >
       <span className={clsx(isClicked ? "gradient__text" : "primary")}>

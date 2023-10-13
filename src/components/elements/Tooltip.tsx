@@ -9,8 +9,9 @@ export default function Tooltip({ children, label, placement }: TooltipProps) {
       render={() => (
         <div
           className={clsx(
-            "rounded-md px-4 py-3",
             "primary__reverse",
+            "px-4 py-3",
+            "rounded-md",
             "bg-neutral-800 dark:bg-neutral-200",
           )}
         >

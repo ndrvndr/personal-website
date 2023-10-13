@@ -20,11 +20,11 @@ export default function InputForm({
         type={type}
         placeholder={placeholder}
         className={clsx(
-          "mt-2 w-full px-2 py-3",
+          "border__color",
           "secondary text-sm",
+          "mt-2 w-full px-2 py-3",
           "rounded-md bg-transparent",
           "placeholder:text-sm placeholder:text-neutral-500",
-          "border__color",
           "focus:outline-none",
           "md:text-base md:placeholder:text-base",
         )}
