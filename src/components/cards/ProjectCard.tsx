@@ -18,11 +18,11 @@ export default function ProjectCard({
   return (
     <li
       className={clsx(
+        "border__color",
         "rounded-md",
         "bg-transparent shadow-lg",
-        "border__color",
-        "dark:bg-neutral-800 dark:shadow-none",
         "transition-transform duration-200",
+        "dark:bg-neutral-800 dark:shadow-none",
         "lg:hover:scale-[1.03]",
       )}
     >

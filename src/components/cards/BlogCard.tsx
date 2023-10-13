@@ -46,11 +46,11 @@ export default function BlogCard({
   return (
     <li
       className={clsx(
+        "border__color",
         "rounded-md",
         "bg-transparent shadow-lg",
-        "border__color",
-        "dark:bg-neutral-800 dark:shadow-none",
         "transition-transform duration-200",
+        "dark:bg-neutral-800 dark:shadow-none",
         "lg:hover:scale-[1.03]",
       )}
       onClick={handleCardClick}
@@ -75,10 +75,10 @@ export default function BlogCard({
               <span
                 key={tag}
                 className={clsx(
-                  "rounded-md px-2 py-1 text-xs",
                   checkTagged?.(tag)
                     ? "bg-gradient-linear text-primary-light"
                     : "bg-neutral-200 dark:bg-neutral-800",
+                  "rounded-md px-2 py-1 text-xs",
                 )}
               >
                 {tag}
