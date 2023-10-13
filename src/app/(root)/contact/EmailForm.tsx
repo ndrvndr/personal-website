@@ -11,10 +11,10 @@ export default function EmailForm() {
 
   return (
     <section>
-      <h2 className="primary font-semibold">Or send me an email</h2>
+      <h2 className="primary font-semibold md:text-xl">Or send me an email</h2>
 
-      <form onSubmit={handleSubmitForm}>
-        <div>
+      <form onSubmit={handleSubmitForm} className="mt-8">
+        <div className="md:flex md:gap-4">
           <InputForm
             id="name"
             label="Name"
@@ -40,9 +40,10 @@ export default function EmailForm() {
           type="submit"
           className={clsx(
             "mt-8 w-full px-4 py-2",
-            "rounded-md text-sm text-primary-dark",
-            "bg-[#262626]",
+            "rounded-md text-sm font-bold text-primary-dark",
+            "bg-neutral-800",
             "disabled:cursor-not-allowed",
+            "md:text-lg",
           )}
         >
           Send Email

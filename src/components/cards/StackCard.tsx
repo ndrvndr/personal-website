@@ -11,17 +11,17 @@ export default function StackCard({ name, icon }: StackCardProps) {
       <div
         className={clsx(
           "w-full px-4 py-2",
-          "text-sm font-medium",
-          "flex items-center gap-2 rounded-full",
-          "border border-solid",
+          "text-sm font-medium md:text-base",
+          "flex items-center gap-2",
+          "rounded-md border-t border-solid",
           "border-primary-gradient dark:border-secondary-gradient",
           "dark:border-opacity-50",
-          "shadow-lg shadow-primary-gradient",
+          "shadow-md shadow-primary-gradient",
           "dark:shadow-secondary-gradient",
         )}
       >
-        <div className="h-6 w-6">{icon}</div>
-        <div className="whitespace-nowrap">{name}</div>
+        {icon}
+        {name}
       </div>
     </div>
   );

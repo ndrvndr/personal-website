@@ -1,21 +1,20 @@
 import BreakLine from "@/components/elements/BreakLine";
-import Hero from "./Hero";
-import Header from "./Header";
-import Stacks from "./Stacks";
 import Career from "./Career";
+import Header from "./Header";
+import Hero from "./Hero";
+import Stacks from "./Stacks";
 
 export default function Home() {
   return (
-    <main>
-      <div className="px-8 pt-6">
+    <>
+      <div className="px-8 pb-5 pt-8">
         <Header />
         <Hero />
         <BreakLine />
         <Career />
         <BreakLine />
         <Stacks />
-        <BreakLine />
       </div>
-    </main>
+    </>
   );
 }

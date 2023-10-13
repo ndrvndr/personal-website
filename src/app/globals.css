@@ -132,6 +132,12 @@ table {
   border-spacing: 0;
 }
 
+@layer base {
+  body {
+    @apply overflow-y-scroll;
+  }
+}
+
 @layer components {
   .gradient__text {
     @apply bg-gradient-linear text-black dark:bg-clip-text dark:text-transparent;
@@ -158,6 +164,6 @@ table {
   }
 
   .border__color {
-    @apply border border-solid border-secondary-light dark:border-secondary-dark;
+    @apply border border-solid border-neutral-300 dark:border-neutral-700;
   }
 }

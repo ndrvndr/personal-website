@@ -1,59 +1,28 @@
 "use client";
-import { FOOTER_ITEMS } from "@/contants/footer";
-import clsx from "clsx";
-import Image from "next/image";
+import { FOOTER_ITEMS, FOOTER_LINKS } from "@/contants/footer";
 import Link from "next/link";
-import { SiSpotify } from "react-icons/si";
-import useSWR from "swr";
+import SpotifyCard from "../cards/SpotifyCard";
+import BreakLine from "../elements/BreakLine";
 
 export default function Footer() {
-  const fetcher = (url: string) => fetch(url).then((r) => r.json());
-  const { data } = useSWR("/api/spotify", fetcher);
-
   return (
-    <footer className="mb-24 mt-8 px-8">
-      <Link
-        target="_blank"
-        rel="noopener noreferer"
-        href={
-          data?.isPlaying
-            ? data.songUrl
-            : "https://open.spotify.com/user/vwg28n9kqnigrvv34x96si8a6"
-        }
-        className={clsx(
-          "cursor-pointer",
-          "relative w-fit max-w-xs",
-          "m-auto p-5",
-          "flex items-center gap-4",
-          "border__color rounded-md",
-        )}
-      >
-        <div className="w-16">
-          {data?.isPlaying ? (
-            <Image
-              className="w-16"
-              src={data?.albumImageUrl}
-              alt={data?.album}
-              width={64}
-              height={64}
-            />
-          ) : (
-            <SiSpotify size={64} color={"#1ED760"} />
-          )}
-        </div>
+    <footer className="mb-[104px] px-8 md:mb-6">
+      <BreakLine />
+      <SpotifyCard display="flex lg:hidden" />
+      <ul className="mt-8 flex flex-wrap justify-center gap-5 text-sm">
+        {FOOTER_LINKS.map((link) => (
+          <Link key={link.label} href="/" className="group cursor-pointer">
+            <li>
+              {link.label}
+              <div className="h-0.5 w-0 bg-gradient-linear lg:group-hover:w-full" />
+            </li>
+          </Link>
+        ))}
+      </ul>
 
-        <div className="flex-1">
-          <p className="font-medium">
-            {data?.isPlaying ? data.title : "Not Listening"}
-          </p>
-          <p className="text-xs">{data?.isPlaying ? data.artist : "Spotify"}</p>
-        </div>
-        <div className="absolute bottom-1.5 right-1.5">
-          <SiSpotify size={20} color={"#1ED760"} />
-        </div>
-      </Link>
-
-      <p className="mb-2 mt-4 text-center text-sm font-medium">Reach me out</p>
+      <p className="mb-2 mt-16 text-center text-sm font-medium md:text-base">
+        Reach me out
+      </p>
       <ul className="flex justify-center gap-4">
         {FOOTER_ITEMS.map(({ icon, href, ariaLabel }, index) => (
           <li key={index}>

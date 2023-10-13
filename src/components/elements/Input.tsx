@@ -7,8 +7,8 @@ export default function InputForm({
   type,
 }: InputFormProps) {
   return (
-    <div className="mt-4">
-      <label htmlFor={id} className="text-sm">
+    <div className="mb-4 w-full">
+      <label htmlFor={id} className="text-sm md:text-base">
         {label}
       </label>
       <input
@@ -17,13 +17,13 @@ export default function InputForm({
         type={type}
         placeholder={placeholder}
         className={clsx(
-          "mt-2 w-full p-2",
+          "mt-2 w-full px-2 py-3",
+          "secondary text-sm",
           "rounded-md bg-transparent",
-          "placeholder:text-sm",
-          "placeholder:opacity-50",
-          "border-2 border-solid border-gray-200",
-          "dark:border-[#262626]",
+          "placeholder:text-sm placeholder:text-neutral-500",
+          "border__color",
           "focus:outline-none",
+          "md:text-base md:placeholder:text-base",
         )}
       />
     </div>

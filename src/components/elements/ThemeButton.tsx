@@ -9,14 +9,18 @@ export default function ThemeButton() {
 
   return (
     <button
-      className={clsx("h-10 w-10 rounded-full ", "grid place-items-center")}
+      className={clsx(
+        "h-10 w-10 rounded-full md:h-0",
+        "grid place-items-center",
+        "md:mb-8 md:mt-4 lg:mt-0",
+      )}
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       aria-label="Theme Button"
     >
       {mounted ? (
         <>
           {theme === "light" ? (
-            <span className="text-2xl">🌔</span>
+            <span className="text-2xl">🌕</span>
           ) : (
             <span className="text-2xl">🌤️</span>
           )}

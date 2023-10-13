@@ -28,7 +28,7 @@ type stacksProps = {
   [key: string]: JSX.Element;
 };
 
-const ICON_SIZE: string = "100%";
+const ICON_SIZE: number = 24;
 
 export const STACKS: stacksProps = {
   JavaScript: <SiJavascript size={ICON_SIZE} color="#FDDC01" />,

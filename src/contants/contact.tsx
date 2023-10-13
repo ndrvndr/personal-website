@@ -13,7 +13,7 @@ export const CONTACT_ITEMS = [
     icon: <FiGithub size={ICON_SIZE} />,
     url: "https://github.com/ndrvndr",
     label: "GitHub",
-    backgroundColor: "bg-[#0C1017]",
+    backgroundColor: "bg-neutral-800",
   },
   {
     icon: <FiLinkedin size={ICON_SIZE} />,
@@ -32,7 +32,7 @@ export const CONTACT_ITEMS = [
     icon: <FiTwitter size={ICON_SIZE} />,
     url: "https://twitter.com/ndrvndr",
     label: "Twitter",
-    backgroundColor: "bg-[#C13584]",
+    backgroundColor: "bg-neutral-800",
   },
   {
     icon: <FiFacebook size={ICON_SIZE} />,

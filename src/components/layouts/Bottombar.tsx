@@ -17,6 +17,7 @@ export default function Bottombar() {
         "flex items-center gap-1",
         "rounded-full p-2",
         "z-20",
+        "md:hidden",
       )}
     >
       {BOTTOMBAR_ITEMS.map((item, index) => {

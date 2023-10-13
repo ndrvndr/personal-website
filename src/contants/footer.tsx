@@ -19,3 +19,16 @@ export const FOOTER_ITEMS = [
     ariaLabel: "GitHub",
   },
 ];
+
+export const FOOTER_LINKS = [
+  { label: "Source Code" },
+  { label: "Design" },
+  { label: "Docs" },
+  { label: "Book Notes" },
+  { label: "Starter Templates" },
+  { label: "Analytics" },
+  { label: "Statistics" },
+  { label: "Guestbook" },
+  { label: "Subscribe" },
+  { label: "RSS" },
+];
