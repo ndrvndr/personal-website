@@ -35,13 +35,14 @@ export default function Aside({ content }: any) {
     };
   }, [headings]);
 
-  const marginByLevel: Record<string, string> = {
+  const MARGIN_BY_LEVEL: Record<string, string> = {
     2: "0px",
     3: "16px",
     4: "32px",
     5: "48px",
     6: "64px",
   };
+
   return (
     <aside
       className={clsx(
@@ -53,7 +54,13 @@ export default function Aside({ content }: any) {
         On This Page
       </h2>
 
-      <ul className="flex max-h-[50vh] flex-col gap-4 overflow-y-auto lg:max-h-[60vh]">
+      <ul
+        className={clsx(
+          "flex flex-col gap-4",
+          "max-h-[50vh] overflow-y-auto",
+          "lg:max-h-[60vh]",
+        )}
+      >
         {headings.map((heading) => {
           const isActiveHeading = activeHeading === heading.headingId;
           return (
@@ -65,7 +72,7 @@ export default function Aside({ content }: any) {
                   : "secondary lg:opacity-50 lg:hover:opacity-100",
               )}
               style={{
-                marginLeft: marginByLevel[heading.level] || "0px",
+                marginLeft: MARGIN_BY_LEVEL[heading.level] || "0px",
                 fontSize: "14px",
               }}
             >

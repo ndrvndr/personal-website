@@ -1,7 +1,6 @@
 "use client";
 const BlockContent = require("@sanity/block-content-to-react");
 import { useCopyToClipboard } from "@/hooks/useCopyToClipboard";
-import { extractHeadings } from "@/lib/extractHeadings";
 import styles from "@/styles/blogDetails.module.css";
 import clsx from "clsx";
 import Image from "next/image";

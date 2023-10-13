@@ -20,7 +20,7 @@ export default function Search() {
       <InputForm
         id="search"
         label="Search"
-        placeholder="Search"
+        placeholder="Search..."
         type="text"
         value={selectedTags}
       />

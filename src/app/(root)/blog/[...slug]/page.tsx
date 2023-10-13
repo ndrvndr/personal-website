@@ -1,3 +1,5 @@
+import BreakLine from "@/components/elements/BreakLine";
+import DonateBox from "@/components/elements/DonateBox";
 import { BlogItem } from "@/types";
 import { format } from "date-fns";
 import Image from "next/image";
@@ -5,10 +7,8 @@ import Link from "next/link";
 import { BiCollapse } from "react-icons/bi";
 import { HiOutlineClock, HiOutlineEye } from "react-icons/hi";
 import { getBlogBySlug } from "../../../../../sanity/action";
-import BreakLine from "@/components/elements/BreakLine";
 import Article from "./Article";
 import Aside from "./Aside";
-import DonateBox from "@/components/elements/DonateBox";
 
 export default async function BlogDetails({
   params,
