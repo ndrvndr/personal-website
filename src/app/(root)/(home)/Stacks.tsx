@@ -1,6 +1,7 @@
 import StackCard from "@/components/cards/StackCard";
 import MarqueeElement from "@/components/elements/Marquee";
 import { STACKS } from "@/contants/stacks";
+import clsx from "clsx";
 import { HiOutlineCode } from "react-icons/hi";
 
 export default function Stacks() {
@@ -9,12 +10,26 @@ export default function Stacks() {
   ).sort(() => Math.random() - 0.5);
   return (
     <section>
-      <div className="primary mb-5 flex items-center gap-2 text-xl md:text-2xl">
+      <div
+        className={clsx(
+          "primary",
+          "mb-5",
+          "flex items-center gap-2",
+          "text-xl md:text-2xl",
+        )}
+      >
         <HiOutlineCode />
         <h2 className="font-bold">Stacks</h2>
       </div>
 
-      <div className="flex flex-col md:max-w-[599px] lg:max-w-[683px] min-[1041px]:max-w-[700px]">
+      <div
+        className={clsx(
+          "flex flex-col",
+          "md:max-w-[599px]",
+          "lg:max-w-[683px]",
+          "min-[1041px]:max-w-[700px]",
+        )}
+      >
         {Array.from({ length: 2 }, (_, index) => {
           const slider = [...stacksInArray].sort(() => Math.random() - 0.5);
           return (

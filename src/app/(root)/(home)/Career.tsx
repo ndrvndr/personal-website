@@ -17,8 +17,8 @@ export default function Career() {
         rel="noopener noreferrer"
         className={clsx(
           "secondary cursor-pointer",
-          "flex items-center gap-3",
           "mb-8 pl-0.5",
+          "flex items-center gap-3",
           "text-sm font-bold md:text-lg",
           "transition-all duration-300",
         )}
