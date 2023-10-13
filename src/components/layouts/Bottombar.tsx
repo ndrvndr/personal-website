@@ -24,14 +24,15 @@ export default function Bottombar() {
         const isActivePage =
           pathname === item.pathname ||
           (item.pathname === "/blog" && pathname.startsWith("/blog/"));
+
         return (
           <Link
             key={index}
             href={item.pathname}
             className={clsx(
+              isActivePage && "bg-gradient-linear ",
               "h-10 w-10 rounded-full",
               "grid place-items-center",
-              isActivePage && "bg-gradient-linear ",
             )}
           >
             <span className={isActivePage ? "text-primary-light" : "primary"}>
@@ -44,8 +45,8 @@ export default function Bottombar() {
       <div
         className={clsx(
           "mx-2 h-6",
-          "border-r border-solid border-secondary-light",
-          "dark:border-secondary-dark",
+          "border-r border-solid border-neutral-200",
+          "dark:border-neutral-800",
         )}
       />
 

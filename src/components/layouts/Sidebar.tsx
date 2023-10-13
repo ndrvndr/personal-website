@@ -16,14 +16,16 @@ export default function Sidebar() {
     <nav
       className={clsx(
         isBlogSlug && "lg:hidden",
-        "sticky top-2 ml-8 hidden h-[calc(100vh-8px)] pt-8",
-        "w-fit md:block",
+        "sticky top-2 hidden",
+        "ml-8 h-[calc(100vh-8px)] w-fit pt-8",
+        "md:block",
         "lg:w-52",
       )}
     >
       <header
         className={clsx(
-          "m-auto flex w-fit items-center justify-between",
+          "m-auto w-fit",
+          "flex items-center justify-between",
           "md:flex-col",
           "lg:mb-12 lg:w-52 lg:flex-row",
         )}
