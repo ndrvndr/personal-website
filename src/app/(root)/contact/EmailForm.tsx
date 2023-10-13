@@ -40,8 +40,8 @@ export default function EmailForm() {
           type="submit"
           className={clsx(
             "mt-8 w-full px-4 py-2",
-            "rounded-md text-sm font-bold text-primary-dark",
-            "bg-neutral-800",
+            "rounded-md bg-neutral-800",
+            "text-sm font-bold text-primary-dark",
             "disabled:cursor-not-allowed",
             "md:text-lg",
           )}
