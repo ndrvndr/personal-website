@@ -9,7 +9,7 @@ export default function Hero() {
       <h1
         className={clsx(
           "primary",
-          "mb-2",
+          "mb-4",
           "flex items-center",
           "text-xl font-bold",
           "min-[347px]:text-2xl md:text-3xl",

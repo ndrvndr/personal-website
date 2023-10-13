@@ -21,7 +21,7 @@ export default function Sidebar() {
     >
       <header
         className={clsx(
-          "m-auto flex w-fit items-center justify-between md:flex-col lg:w-52 lg:flex-row",
+          "m-auto flex w-fit items-center justify-between md:flex-col lg:mb-12 lg:w-52 lg:flex-row",
         )}
       >
         <div className="flex items-center gap-4">

@@ -164,6 +164,6 @@ table {
   }
 
   .border__color {
-    @apply border border-solid border-neutral-300 dark:border-neutral-700;
+    @apply border border-solid border-neutral-200 dark:border-neutral-800;
   }
 }

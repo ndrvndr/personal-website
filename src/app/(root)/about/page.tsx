@@ -6,15 +6,10 @@ import clsx from "clsx";
 export default function About() {
   return (
     <div className="p-8">
-      <h2 className="primary text-xl font-bold md:text-2xl">About me</h2>
-      <h1
-        className={clsx(
-          "mt-2 w-fit",
-          "gradient__text text-2xl font-bold md:text-3xl",
-        )}
-      >
-        Andre Avindra
-      </h1>
+      <h1 className="primary text-xl font-bold md:text-2xl">About me</h1>
+      <p className="secondary mt-2 text-sm leading-relaxed md:text-lg">
+        Short story about me.
+      </p>
 
       <BreakLine decoration="border-dashed" />
 

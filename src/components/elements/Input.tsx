@@ -8,7 +8,7 @@ export default function InputForm({
 }: InputFormProps) {
   return (
     <div className="mb-4 w-full">
-      <label htmlFor={id} className="text-sm md:text-base">
+      <label htmlFor={id} className="primary text-sm md:text-base">
         {label}
       </label>
       <input

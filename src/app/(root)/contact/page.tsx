@@ -8,7 +8,7 @@ export default function Contact() {
     <div className="p-8">
       <h1 className="primary text-xl font-bold md:text-2xl">Contact</h1>
       <p className="secondary mt-2 text-sm leading-relaxed md:text-lg">
-        Reach me out
+        Reach me out.
       </p>
 
       <BreakLine decoration="border-dashed" />
