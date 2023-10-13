@@ -10,10 +10,12 @@ import ThemeButton from "../elements/ThemeButton";
 
 export default function Sidebar() {
   const pathname = usePathname();
+  const isBlogSlug = pathname.startsWith("/blog/");
 
   return (
     <nav
       className={clsx(
+        isBlogSlug && "lg:hidden",
         "sticky top-2 ml-8 hidden h-[calc(100vh-8px)] pt-8",
         "w-fit md:block",
         "lg:w-52",
@@ -21,7 +23,9 @@ export default function Sidebar() {
     >
       <header
         className={clsx(
-          "m-auto flex w-fit items-center justify-between md:flex-col lg:mb-12 lg:w-52 lg:flex-row",
+          "m-auto flex w-fit items-center justify-between",
+          "md:flex-col",
+          "lg:mb-12 lg:w-52 lg:flex-row",
         )}
       >
         <div className="flex items-center gap-4">
@@ -48,7 +52,10 @@ export default function Sidebar() {
 
       <ul className="space-y-4">
         {SIDEBAR_ITEMS.map((item, index) => {
-          const isActivePage = pathname === item.pathname;
+          const isActivePage =
+            pathname === item.pathname ||
+            (item.pathname === "/blog" && pathname.startsWith("/blog/"));
+
           return (
             <li key={index}>
               <Link href={item.pathname}>

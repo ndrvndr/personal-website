@@ -1,7 +1,5 @@
-import Bottombar from "@/components/layouts/Bottombar";
-import Footer from "@/components/layouts/Footer";
+import Layouts from "@/components/layouts";
 import Providers from "@/components/layouts/Providers";
-import Sidebar from "@/components/layouts/Sidebar";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../globals.css";
@@ -24,15 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Providers>
-          <div className="w-fulll sticky top-0 z-10 h-2 bg-gradient-linear"></div>
-          <div className="md:flex lg:m-auto lg:max-w-7xl lg:justify-center lg:gap-5">
-            <Sidebar />
-            <div>
-              <main className="lg:max-w-4xl">{children}</main>
-              <Bottombar />
-              <Footer />
-            </div>
-          </div>
+          <Layouts>{children}</Layouts>
         </Providers>
       </body>
     </html>

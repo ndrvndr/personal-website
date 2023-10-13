@@ -31,13 +31,21 @@ export default function ProjectCard({
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Visit live production demo"
-        className={clsx(
-          "group cursor-pointer",
-          "flex flex-col justify-between",
-          "h-full",
-        )}
+        className={clsx("group cursor-pointer", "flex flex-col", "h-full")}
       >
-        <div className="px-4 pt-4">
+        <div>
+          <Image
+            className="h-auto w-auto rounded-t-md"
+            width={1920}
+            height={1080}
+            src={image}
+            alt={imageAlt}
+            loading="lazy"
+            aria-label="Live Production Screenshot"
+          />
+        </div>
+
+        <div className="p-4">
           <div className="flex items-center gap-2">
             <Ping />
 
@@ -57,10 +65,8 @@ export default function ProjectCard({
           <p className="secondary my-4 text-sm leading-relaxed md:text-base">
             {description}
           </p>
-        </div>
 
-        <div>
-          <ul className="mb-4 flex flex-wrap gap-4 px-4">
+          <ul className="flex flex-wrap gap-4">
             {techStack.map((tech, index) => (
               <li className="text-2xl" key={index}>
                 <Tooltip placement="top" label={tech.label}>
@@ -69,16 +75,6 @@ export default function ProjectCard({
               </li>
             ))}
           </ul>
-
-          <Image
-            className="h-auto w-auto rounded-b-md"
-            width={1920}
-            height={1080}
-            src={image}
-            alt={imageAlt}
-            loading="lazy"
-            aria-label="Live Production Screenshot"
-          />
         </div>
       </Link>
     </li>

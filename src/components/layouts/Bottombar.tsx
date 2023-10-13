@@ -21,7 +21,9 @@ export default function Bottombar() {
       )}
     >
       {BOTTOMBAR_ITEMS.map((item, index) => {
-        const isActivePage = pathname === item.pathname;
+        const isActivePage =
+          pathname === item.pathname ||
+          (item.pathname === "/blog" && pathname.startsWith("/blog/"));
         return (
           <Link
             key={index}

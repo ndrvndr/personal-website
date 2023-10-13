@@ -5,7 +5,10 @@ export default function InputForm({
   label,
   placeholder,
   type,
+  value,
 }: InputFormProps) {
+  const formattedValue = Array.isArray(value) ? value.join(" ") : value;
+
   return (
     <div className="mb-4 w-full">
       <label htmlFor={id} className="primary text-sm md:text-base">
@@ -25,6 +28,7 @@ export default function InputForm({
           "focus:outline-none",
           "md:text-base md:placeholder:text-base",
         )}
+        value={formattedValue}
       />
     </div>
   );
@@ -35,4 +39,5 @@ interface InputFormProps {
   label: string;
   placeholder: string;
   type: string;
+  value?: string | string[];
 }
