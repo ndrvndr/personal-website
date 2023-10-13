@@ -14,7 +14,7 @@ export default function Stacks() {
         <h2 className="font-bold">Stacks</h2>
       </div>
 
-      <div className="flex flex-col md:max-w-[599px] lg:max-w-[683px] min-[1173px]:max-w-4xl">
+      <div className="flex flex-col md:max-w-[599px] lg:max-w-[683px] min-[1041px]:max-w-[700px]">
         {Array.from({ length: 2 }, (_, index) => {
           const slider = [...stacksInArray].sort(() => Math.random() - 0.5);
           return (
