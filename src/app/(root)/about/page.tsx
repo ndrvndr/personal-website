@@ -1,7 +1,6 @@
 import BreakLine from "@/components/elements/BreakLine";
 import Tooltip from "@/components/elements/Tooltip";
 import { ABOUT_TEXTS, FAVORITE_STACKS } from "@/contants/about";
-import clsx from "clsx";
 
 export default function About() {
   return (
