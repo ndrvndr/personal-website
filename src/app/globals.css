@@ -133,8 +133,16 @@ table {
 }
 
 @layer base {
-  body {
-    @apply overflow-y-scroll;
+  *::-webkit-scrollbar {
+    @apply w-1;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    @apply rounded-sm bg-[#B3FFAB];
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
   }
 }
 
