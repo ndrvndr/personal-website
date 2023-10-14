@@ -1,7 +1,7 @@
 import BreakLine from "@/components/elements/BreakLine";
 import PageTitle from "@/components/elements/PageTitle";
 import Tooltip from "@/components/elements/Tooltip";
-import { ABOUT_TEXTS, FAVORITE_STACKS } from "@/contants/about";
+import { ABOUT_TEXTS, FAVORITE_STACKS } from "@/constants/about";
 
 export default function About() {
   return (

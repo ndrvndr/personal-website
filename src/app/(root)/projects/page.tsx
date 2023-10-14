@@ -1,6 +1,6 @@
 import ProjectCard from "@/components/cards/ProjectCard";
 import PageTitle from "@/components/elements/PageTitle";
-import { PROJECTCARD_CONTENTS } from "@/contants/projects";
+import { PROJECTCARD_CONTENTS } from "@/constants/projects";
 
 export default function Projects() {
   return (

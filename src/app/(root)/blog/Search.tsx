@@ -1,7 +1,7 @@
 "use client";
 import InputForm from "@/components/elements/Input";
 import Tag from "@/components/elements/Tag";
-import { TAGS } from "@/contants/blog";
+import { TAGS } from "@/constants/blog";
 import { useState } from "react";
 
 export default function Search() {

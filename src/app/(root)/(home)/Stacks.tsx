@@ -1,6 +1,6 @@
 import StackCard from "@/components/cards/StackCard";
 import MarqueeElement from "@/components/elements/Marquee";
-import { STACKS } from "@/contants/stacks";
+import { STACKS } from "@/constants/stacks";
 import clsx from "clsx";
 import { HiOutlineCode } from "react-icons/hi";
 

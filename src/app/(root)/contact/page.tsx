@@ -1,7 +1,7 @@
 import SocialMediaCard from "@/components/cards/SocialMediaCard";
 import BreakLine from "@/components/elements/BreakLine";
 import PageTitle from "@/components/elements/PageTitle";
-import { CONTACT_ITEMS } from "@/contants/contact";
+import { CONTACT_ITEMS } from "@/constants/contact";
 import EmailForm from "./EmailForm";
 
 export default function Contact() {
