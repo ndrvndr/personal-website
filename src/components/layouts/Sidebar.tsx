@@ -16,8 +16,8 @@ export default function Sidebar() {
     <nav
       className={clsx(
         isBlogSlug && "lg:hidden",
-        "sticky top-2 hidden",
-        "ml-8 h-[calc(100vh-8px)] w-fit pt-8",
+        "sticky top-0 hidden",
+        "ml-8 h-screen w-fit pt-8",
         "md:block",
         "lg:w-52",
       )}
