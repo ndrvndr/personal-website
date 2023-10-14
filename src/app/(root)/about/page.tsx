@@ -1,16 +1,12 @@
 import BreakLine from "@/components/elements/BreakLine";
+import PageTitle from "@/components/elements/PageTitle";
 import Tooltip from "@/components/elements/Tooltip";
 import { ABOUT_TEXTS, FAVORITE_STACKS } from "@/contants/about";
 
 export default function About() {
   return (
     <div className="p-8">
-      <h1 className="primary text-xl font-bold md:text-2xl">About me</h1>
-      <p className="secondary mt-2 text-sm leading-relaxed md:text-lg">
-        Short story about me.
-      </p>
-
-      <BreakLine decoration="border-dashed" />
+      <PageTitle title="About me" description="Short story about me." />
 
       <section>
         {ABOUT_TEXTS.map(({ text }, index) => (

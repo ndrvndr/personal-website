@@ -1,5 +1,5 @@
 import BlogCard from "@/components/cards/BlogCard";
-import BreakLine from "@/components/elements/BreakLine";
+import PageTitle from "@/components/elements/PageTitle";
 import { BlogItem } from "@/types";
 import { getBlog } from "../../../../sanity/action";
 import Search from "./Search";
@@ -13,12 +13,10 @@ export default async function Blog() {
 
   return (
     <div className="p-8">
-      <h1 className="primary text-xl font-bold md:text-2xl">Blog</h1>
-      <p className="secondary mt-2 text-sm leading-relaxed md:text-lg">
-        Share thoughts and tutorials on web development.
-      </p>
-
-      <BreakLine decoration="border-dashed" />
+      <PageTitle
+        title="Blog"
+        description="Share thoughts and tutorials on web development"
+      />
 
       <section className="">
         <Search />

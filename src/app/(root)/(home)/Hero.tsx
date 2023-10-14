@@ -10,19 +10,19 @@ export default function Hero() {
         className={clsx(
           "primary",
           "mb-4",
-          "flex items-center",
           "text-xl font-bold",
           "min-[347px]:text-2xl md:text-3xl",
         )}
       >
-        Hi, I&apos;m
-        <span className="gradient__text ml-2">Andre Avindra</span>
-        <div className="ml-1 animate-waving-hand">👋</div>
+        Call me <span className="gradient__text">Andre</span>
+        <div className="ml-1 inline-block animate-waving-hand">👋</div>
       </h1>
 
       <ul className="secondary mb-4 list-disc space-y-1 pl-4 text-sm md:text-lg">
         <li>Front-End Web Developer</li>
-        <li>I build website.</li>
+        <li>
+          I build <span className="gradient__text">website</span>.
+        </li>
       </ul>
 
       <p className="secondary mb-4 text-sm leading-relaxed md:text-lg">

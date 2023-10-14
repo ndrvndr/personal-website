@@ -17,7 +17,7 @@ export default function Layouts({ children }: { children: React.ReactNode }) {
         className={clsx(
           "md:flex",
           "lg:m-auto lg:max-w-5xl",
-          "lg:justify-center lg:gap-5",
+          "lg:justify-center",
         )}
       >
         <Sidebar />

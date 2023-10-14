@@ -41,9 +41,9 @@ export default function Sidebar() {
 
           <div className="hidden flex-col lg:flex">
             <h2 className="primary text-base font-medium md:text-lg">
-              ndr.vndr
+              ndrvndr
             </h2>
-            <p className="secondary text-sm md:text-base">Λ.7214</p>
+            <p className="secondary text-sm md:text-base">Λ7214</p>
           </div>
         </div>
 
