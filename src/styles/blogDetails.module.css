@@ -47,5 +47,5 @@
 }
 
 .content a {
-  @apply gradient__text;
+  @apply bg-gradient-linear text-black dark:bg-clip-text dark:text-transparent;
 }
