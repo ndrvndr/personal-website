@@ -1,13 +1,22 @@
 import ProjectCard from "@/components/cards/ProjectCard";
 import PageTitle from "@/components/elements/PageTitle";
 import { PROJECTCARD_CONTENTS } from "@/constants/projects";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Projects | Andre Avindra",
+  description: "RShowcase of my works on frontend development.",
+  alternates: {
+    canonical: "https://andreavindra.vercel.app/projects",
+  },
+};
 
 export default function Projects() {
   return (
     <div className="p-8">
       <PageTitle
         title="Projects"
-        description="Showcase of my works on frontend development"
+        description="Showcase of my works on frontend development."
       />
 
       <section className="lg:mb-20">

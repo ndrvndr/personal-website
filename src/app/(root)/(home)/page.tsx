@@ -1,9 +1,19 @@
 import BreakLine from "@/components/elements/BreakLine";
 import PageTitle from "@/components/elements/PageTitle";
+import type { Metadata } from "next";
 import Career from "./Career";
 import Header from "./Header";
 import Hero from "./Hero";
 import Stacks from "./Stacks";
+
+export const metadata: Metadata = {
+  title: "Andre Avindra",
+  description:
+    "Personal website and blog by Andre Avindra. Showcase of my projects, thoughts and skills on website development.",
+  alternates: {
+    canonical: "https://andreavindra.vercel.app/",
+  },
+};
 
 export default function Home() {
   return (

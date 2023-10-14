@@ -1,8 +1,16 @@
 import SocialMediaCard from "@/components/cards/SocialMediaCard";
 import BreakLine from "@/components/elements/BreakLine";
 import PageTitle from "@/components/elements/PageTitle";
-import { CONTACT_ITEMS } from "@/constants/contact";
+import type { Metadata } from "next";
 import EmailForm from "./EmailForm";
+
+export const metadata: Metadata = {
+  title: "Contact | Andre Avindra",
+  description: "Reach me out.",
+  alternates: {
+    canonical: "https://andreavindra.vercel.app/contact",
+  },
+};
 
 export default function Contact() {
   return (

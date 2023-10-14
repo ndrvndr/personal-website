@@ -1,8 +1,17 @@
 import BlogCard from "@/components/cards/BlogCard";
 import PageTitle from "@/components/elements/PageTitle";
 import { BlogItem } from "@/types";
+import type { Metadata } from "next";
 import { getBlog } from "../../../../sanity/action";
 import Search from "./Search";
+
+export const metadata: Metadata = {
+  title: "Blog | Andre Avindra",
+  description: "Share thoughts and tutorials on web development",
+  alternates: {
+    canonical: "https://andreavindra.vercel.app/blog",
+  },
+};
 
 export default async function Blog() {
   const blogs = await getBlog({
@@ -15,7 +24,7 @@ export default async function Blog() {
     <div className="p-8">
       <PageTitle
         title="Blog"
-        description="Share thoughts and tutorials on web development"
+        description="Share thoughts and tutorials on web development."
       />
 
       <section className="">

@@ -2,6 +2,15 @@ import BreakLine from "@/components/elements/BreakLine";
 import PageTitle from "@/components/elements/PageTitle";
 import Tooltip from "@/components/elements/Tooltip";
 import { ABOUT_TEXTS, FAVORITE_STACKS } from "@/constants/about";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About | Andre Avindra",
+  description: "Short story about Andre Avindra",
+  alternates: {
+    canonical: "https://andreavindra.vercel.app/about",
+  },
+};
 
 export default function About() {
   return (

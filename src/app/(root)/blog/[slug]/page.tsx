@@ -1,7 +1,9 @@
 import BreakLine from "@/components/elements/BreakLine";
 import DonateBox from "@/components/elements/DonateBox";
+import { DEFAULT_METADATA } from "@/constants/metadata";
 import { BlogItem } from "@/types";
 import { format } from "date-fns";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { BiCollapse } from "react-icons/bi";
@@ -9,6 +11,30 @@ import { HiOutlineClock, HiOutlineEye } from "react-icons/hi";
 import { getBlogBySlug } from "../../../../../sanity/action";
 import Article from "./Article";
 import Aside from "./Aside";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const blog = (await getBlogBySlug(params.slug)) as BlogItem;
+  return {
+    title: `${blog.title} | Andre Avindra`,
+    description: blog.description,
+    openGraph: {
+      images: DEFAULT_METADATA.image,
+      url: `https://andreavindra.vercel.app/blog/${blog.slug}`,
+      siteName: DEFAULT_METADATA.siteName,
+      locale: DEFAULT_METADATA.locale,
+      type: "article",
+      authors: "Andre Avindra",
+    },
+    keywords: blog.title,
+    alternates: {
+      canonical: `${process.env.DOMAIN}/${blog.slug}`,
+    },
+  };
+}
 
 export default async function BlogDetails({
   params,
