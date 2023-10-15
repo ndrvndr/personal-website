@@ -9,6 +9,7 @@ import { HiOutlineClock, HiOutlineEye } from "react-icons/hi";
 import { getBlog } from "../../../../../sanity/action";
 import Article from "./Article";
 import Aside from "./Aside";
+import Comment from "@/components/elements/Comment";
 
 export async function generateMetadata({
   params,
@@ -96,9 +97,7 @@ export default async function BlogDetails({
 
         <DonateBox classname="w-64 lg:hidden" />
 
-        {/* <div className="mt-20 h-fit w-full md:mt-32">
-              <Comment />
-            </div> */}
+        <Comment />
       </section>
     </div>
   );
