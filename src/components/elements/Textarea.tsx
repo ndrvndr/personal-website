@@ -21,6 +21,7 @@ export default function Textarea({ id, label, placeholder }: TextareaProps) {
           "focus:outline-none",
           "md:text-base md:placeholder:text-base",
         )}
+        readOnly
       />
     </div>
   );

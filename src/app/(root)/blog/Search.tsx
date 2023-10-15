@@ -21,7 +21,7 @@ export default function Search() {
         id="search"
         label="Search"
         placeholder="Search..."
-        type="text"
+        type="search"
         value={selectedTags}
       />
 

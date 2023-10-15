@@ -1,4 +1,3 @@
-"use client";
 import { FOOTER_ITEMS, FOOTER_LINKS } from "@/constants/footer";
 import Link from "next/link";
 import SpotifyCard from "../cards/SpotifyCard";

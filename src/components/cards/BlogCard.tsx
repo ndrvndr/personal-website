@@ -3,7 +3,6 @@ import clsx from "clsx";
 import { format } from "date-fns";
 import Image from "next/image";
 import Link from "next/link";
-import * as React from "react";
 import { HiOutlineClock, HiOutlineEye } from "react-icons/hi";
 import { incrementViews } from "../../../sanity/action";
 
@@ -32,14 +31,12 @@ export default function BlogCard({
   slug,
   checkTagged,
 }: Props) {
-  const [localViews, setLocalViews] = React.useState(views);
-
   const handleCardClick = async () => {
     try {
-      const updatedViews = await incrementViews(id);
-      setLocalViews(updatedViews);
+      await incrementViews(id);
     } catch (error) {
       console.error(error);
+      throw error;
     }
   };
 
@@ -101,7 +98,7 @@ export default function BlogCard({
             <div className="flex items-center gap-1">
               <HiOutlineEye className="text-base" />
               <span className="gradient__text">
-                {localViews?.toLocaleString() ?? "0"} views
+                {views?.toLocaleString() ?? "0"} views
               </span>
             </div>
           </div>

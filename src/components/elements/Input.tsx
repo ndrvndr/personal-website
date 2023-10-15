@@ -29,6 +29,8 @@ export default function InputForm({
           "md:text-base md:placeholder:text-base",
         )}
         value={formattedValue}
+        readOnly
+        autoComplete={id}
       />
     </div>
   );

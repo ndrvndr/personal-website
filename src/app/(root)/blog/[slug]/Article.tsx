@@ -1,17 +1,20 @@
 "use client";
 const BlockContent = require("@sanity/block-content-to-react");
 import { useCopyToClipboard } from "@/hooks/useCopyToClipboard";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 import styles from "@/styles/blogDetails.module.css";
 import clsx from "clsx";
 import Image from "next/image";
 import * as React from "react";
 import { BiCheckDouble, BiSolidCopyAlt } from "react-icons/bi";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { materialOceanic } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { a11yDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export default function Article({ content }: any) {
   const [value, copy] = useCopyToClipboard();
   const [isCopied, setIsCopied] = React.useState<boolean>(false);
+  const isTableSize = useMediaQuery("(min-width: 768px)");
+  const isLaptopSize = useMediaQuery("(min-width: 1024px)");
 
   const handleCopy = (code: string) => {
     copy(code);
@@ -34,13 +37,14 @@ export default function Article({ content }: any) {
         <div className="group relative mb-5">
           <SyntaxHighlighter
             language={props.node.language}
-            style={materialOceanic}
+            style={a11yDark}
             customStyle={{
               padding: "16px",
               fontSize: "14px",
               borderRadius: "8px",
             }}
             PreTag="pre"
+            wrapLongLines={isTableSize ? (isLaptopSize ? false : true) : false}
           >
             {props.node.code}
           </SyntaxHighlighter>

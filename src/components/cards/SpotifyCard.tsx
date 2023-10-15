@@ -1,19 +1,22 @@
+import { getNowPlaying } from "@/lib/songPlayingNow";
 import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
 import { SiSpotify } from "react-icons/si";
-import useSWR from "swr";
 
-export default function SpotifyCard({ display }: { display: string }) {
-  const fetcher = (url: string) => fetch(url).then((r) => r.json());
-  const { data } = useSWR("/api/spotify", fetcher);
+export default async function SpotifyCard({ display }: { display: string }) {
+  const songPlayingNow = await getNowPlaying();
+
+  const { isPlaying, songUrl, album, albumImageUrl, artist, title } =
+    songPlayingNow;
+
   return (
     <Link
       target="_blank"
       rel="noopener noreferer"
       href={
-        data?.isPlaying
-          ? data.songUrl
+        isPlaying && songUrl
+          ? songUrl
           : "https://open.spotify.com/user/vwg28n9kqnigrvv34x96si8a6"
       }
       className={clsx(
@@ -27,11 +30,11 @@ export default function SpotifyCard({ display }: { display: string }) {
       )}
     >
       <div className="w-16">
-        {data?.isPlaying ? (
+        {isPlaying ? (
           <Image
             className="h-auto w-auto"
-            src={data?.albumImageUrl}
-            alt={data?.album}
+            src={albumImageUrl || ""}
+            alt={album || ""}
             width={64}
             height={64}
           />
@@ -41,12 +44,10 @@ export default function SpotifyCard({ display }: { display: string }) {
       </div>
 
       <div className="flex-1">
-        <p className="font-medium">
-          {data?.isPlaying ? data.title : "Not Listening"}
+        <p className="font-medium leading-tight">
+          {isPlaying ? title : "Not Listening"}
         </p>
-        <p className="mt-1 text-xs">
-          {data?.isPlaying ? data.artist : "Spotify"}
-        </p>
+        <p className="mt-1 text-xs">{isPlaying ? artist : "Spotify"}</p>
       </div>
       <div className="absolute bottom-2 right-2">
         <SiSpotify size={20} color={"#1ED760"} />

@@ -27,6 +27,7 @@
     "react-icons": "^4.11.0",
     "react-syntax-highlighter": "^15.5.0",
     "sanity": "^3.18.0",
+    "sharp": "^0.32.6",
     "styled-components": "5.2",
     "swr": "^2.2.4",
     "use-scramble": "^2.2.12"

@@ -14,11 +14,11 @@ export const metadata: Metadata = {
 };
 
 export default async function Blog() {
-  const blogs = await getBlog({
+  const blogs = (await getBlog({
     query: "",
     tags: "",
     page: "1",
-  });
+  })) as BlogItem[];
 
   return (
     <div className="p-8">
@@ -43,7 +43,6 @@ export default async function Blog() {
               releaseDate={blog.releaseDate}
               description={blog.description}
               slug={blog.slug.current}
-              //   checkTagged={checkTagged}
             />
           ))}
         </ul>

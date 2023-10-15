@@ -8,7 +8,6 @@ import * as React from "react";
 export default function Aside({ content }: any) {
   const headings = extractHeadings(content);
   const [activeHeading, setActiveHeading] = React.useState<string | null>(null);
-  console.log(activeHeading);
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -46,8 +45,9 @@ export default function Aside({ content }: any) {
   return (
     <aside
       className={clsx(
-        "border__color mb-8 h-fit w-full py-4 pl-4",
-        "lg:sticky lg:top-8 lg:mb-0 lg:border-none lg:pb-0",
+        "border__color mb-8 h-fit w-full p-4",
+        "lg:sticky lg:top-8",
+        "lg:mb-0 lg:border-none lg:p-0",
       )}
     >
       <h2 className="primary mb-4 text-xl font-bold md:text-2xl">
@@ -57,6 +57,7 @@ export default function Aside({ content }: any) {
       <ul
         className={clsx(
           "flex flex-col gap-4",
+          "py-0.5",
           "max-h-[50vh] overflow-y-auto",
           "lg:max-h-[60vh]",
         )}

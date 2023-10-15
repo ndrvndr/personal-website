@@ -30,52 +30,22 @@ export const getBlog = async (params: GetBlogsParams) => {
         tags,
         content,
       }`,
+      {
+        next: { revalidate: 3600 },
+      },
     );
 
     return blogs;
   } catch (error) {
     console.error(error);
+    throw error;
   }
 };
 
-export async function getBlogBySlug(slug: string) {
-  try {
-    const query = `*[_type == "blog" && slug.current == "${slug}"][0] {
-      _id,
-      title,
-      slug,
-      readingTime,
-      views,
-      releaseDate,
-      description,
-      "image": poster.asset->url,
-      tags,
-      content,
-    }`;
-    const data = await readClient.fetch(query);
-
-    return data;
-  } catch (error) {
-    console.error(error);
-  }
-}
-
-export async function getSlugs() {
-  try {
-    const query = groq`*[_type == "blog" && defined(slug.current)][].slug.current`;
-    const slugs = await readClient.fetch(query);
-
-    return slugs;
-  } catch (error) {
-    console.error(error);
-    return [];
-  }
-}
-
-export async function incrementViews(blogId: string): Promise<number> {
+export async function incrementViews(blogId: string): Promise<void> {
   try {
     const currentViewsQuery = groq`*[_type == "blog" && _id == $blogId][0].views`;
-    const currentViews = await writeClient.fetch<number>(currentViewsQuery, {
+    const currentViews = await readClient.fetch<number>(currentViewsQuery, {
       blogId,
     });
 
@@ -88,8 +58,6 @@ export async function incrementViews(blogId: string): Promise<number> {
     };
 
     await writeClient.transaction().patch(blogId, patchOperation).commit();
-
-    return updatedViews;
   } catch (error) {
     console.error(error);
     throw error;

@@ -11,7 +11,7 @@ export function buildQuery(params: BuildQueryParams) {
 
   const conditions = [`*[_type=="${type}"`];
 
-  if (query) conditions.push(`title match "*${query}*"`);
+  if (query) conditions.push(`slug.current match "*${query}*"`);
 
   if (tags && tags !== "all") {
     conditions.push(`tags == "${tags}"`);

@@ -25,7 +25,7 @@ export default function EmailForm() {
             id="email"
             label="Email"
             placeholder="Enter your email address"
-            type="text"
+            type="email"
           />
         </div>
 

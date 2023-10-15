@@ -1,3 +1,4 @@
+"use client";
 import clsx from "clsx";
 import { useTheme } from "next-themes";
 import * as React from "react";
