@@ -69,7 +69,7 @@ export default function Aside({ content }: any) {
               key={heading.headingId}
               className={clsx(
                 isActiveHeading
-                  ? "primary font-medium"
+                  ? "primary"
                   : "secondary lg:opacity-50 lg:hover:opacity-100",
               )}
               style={{
