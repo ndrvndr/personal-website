@@ -2,6 +2,7 @@
 import InputForm from "@/components/elements/Input";
 import Textarea from "@/components/elements/Textarea";
 import clsx from "clsx";
+import { motion } from "framer-motion";
 
 export default function EmailForm() {
   const handleSubmitForm = (e: React.FormEvent<HTMLFormElement>) => {
@@ -10,7 +11,11 @@ export default function EmailForm() {
   };
 
   return (
-    <section>
+    <motion.section
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.2 }}
+    >
       <h2 className="primary text-lg font-semibold md:text-xl">
         Or send me an email
       </h2>
@@ -51,6 +56,6 @@ export default function EmailForm() {
           Send Email
         </button>
       </form>
-    </section>
+    </motion.section>
   );
 }

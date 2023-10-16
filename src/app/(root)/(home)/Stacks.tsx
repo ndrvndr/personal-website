@@ -1,15 +1,22 @@
+"use client";
 import StackCard from "@/components/cards/StackCard";
 import MarqueeElement from "@/components/elements/Marquee";
 import { STACKS } from "@/constants/stacks";
 import clsx from "clsx";
+import { motion } from "framer-motion";
 import { HiOutlineCode } from "react-icons/hi";
 
 export default function Stacks() {
   const stacksInArray: Array<[string, JSX.Element]> = Object.entries(
     STACKS,
   ).sort(() => Math.random() - 0.5);
+
   return (
-    <section>
+    <motion.section
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.4 }}
+    >
       <div
         className={clsx(
           "primary",
@@ -44,6 +51,6 @@ export default function Stacks() {
           );
         })}
       </div>
-    </section>
+    </motion.section>
   );
 }

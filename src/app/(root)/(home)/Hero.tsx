@@ -1,11 +1,17 @@
+"use client";
+import BreakLine from "@/components/elements/BreakLine";
 import Ping from "@/components/elements/Ping";
 import clsx from "clsx";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { SiGmail } from "react-icons/si";
 
 export default function Hero() {
   return (
-    <section>
+    <motion.section
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+    >
       <h1
         className={clsx(
           "primary",
@@ -50,6 +56,7 @@ export default function Hero() {
         <SiGmail />
         Contact Me
       </Link>
-    </section>
+      <BreakLine />
+    </motion.section>
   );
 }

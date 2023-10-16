@@ -1,11 +1,18 @@
+"use client";
+import BreakLine from "@/components/elements/BreakLine";
 import clsx from "clsx";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { BiSolidDownvote } from "react-icons/bi";
 import { MdOutlineWorkHistory } from "react-icons/md";
 
 export default function Career() {
   return (
-    <section>
+    <motion.section
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.2 }}
+    >
       <div className="mb-2 flex items-center gap-2 text-lg md:text-xl">
         <MdOutlineWorkHistory size={20} />
         <h2 className="primary font-bold">Career</h2>
@@ -58,6 +65,8 @@ export default function Career() {
           </div>
         ))}
       </div>
-    </section>
+
+      <BreakLine />
+    </motion.section>
   );
 }
