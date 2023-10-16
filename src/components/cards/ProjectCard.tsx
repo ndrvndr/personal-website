@@ -1,5 +1,6 @@
 "use client";
 import clsx from "clsx";
+import { motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import * as React from "react";
@@ -16,7 +17,9 @@ export default function ProjectCard({
   imageAlt,
 }: ProjectCardProps) {
   return (
-    <li
+    <motion.li
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
       className={clsx(
         "border__color",
         "rounded-md",
@@ -77,7 +80,7 @@ export default function ProjectCard({
           </ul>
         </div>
       </Link>
-    </li>
+    </motion.li>
   );
 }
 

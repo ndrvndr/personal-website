@@ -1,4 +1,3 @@
-import BreakLine from "@/components/elements/BreakLine";
 import PageTitle from "@/components/elements/PageTitle";
 import type { Metadata } from "next";
 import Career from "./Career";
@@ -22,9 +21,7 @@ export default function Home() {
         <PageTitle title="Home" description="Personal website and blog." />
         <Header />
         <Hero />
-        <BreakLine />
         <Career />
-        <BreakLine />
         <Stacks />
       </div>
     </>
