@@ -1,8 +1,9 @@
 import { FOOTER_ITEMS, FOOTER_LINKS } from "@/constants/footer";
+import clsx from "clsx";
 import Link from "next/link";
 import SpotifyCard from "../cards/SpotifyCard";
 import BreakLine from "../elements/BreakLine";
-import clsx from "clsx";
+import Tooltip from "../elements/Tooltip";
 
 export default function Footer() {
   return (
@@ -21,14 +22,18 @@ export default function Footer() {
               className="group cursor-pointer"
               aria-label={`Go to ${link.label} page`}
             >
-              {link.label}
-              <div
-                className={clsx(
-                  "h-0.5 w-0 bg-gradient-linear",
-                  "transition-all duration-200",
-                  "lg:group-hover:w-full",
-                )}
-              />
+              <Tooltip placement="top" label={link.toolTip}>
+                <div>
+                  {link.label}
+                  <div
+                    className={clsx(
+                      "h-0.5 w-0 bg-gradient-linear",
+                      "transition-all duration-200",
+                      "lg:group-hover:w-full",
+                    )}
+                  />
+                </div>
+              </Tooltip>
             </Link>
           </li>
         ))}
