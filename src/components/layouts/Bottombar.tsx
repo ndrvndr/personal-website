@@ -14,7 +14,7 @@ export default function Bottombar() {
         "border__gradient backdrop-blur-3xl",
         "fixed bottom-4 left-1/2 z-20 -translate-x-1/2",
         "flex items-center justify-evenly",
-        "w-[83vw] max-w-md rounded-full p-2",
+        "w-[85vw] max-w-md rounded-full p-2",
         "md:hidden",
       )}
     >
