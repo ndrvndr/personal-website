@@ -30,7 +30,7 @@ export default function ProjectCard({
         href={url}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Visit live production demo"
+        aria-label={`Visit ${title} live production demo`}
         className={clsx("group cursor-pointer", "flex flex-col", "h-full")}
       >
         <div>
@@ -41,7 +41,7 @@ export default function ProjectCard({
             src={image}
             alt={imageAlt}
             loading="lazy"
-            aria-label="Live Production Screenshot"
+            aria-label={`Live ${title} Production Screenshot`}
           />
         </div>
 
@@ -49,7 +49,7 @@ export default function ProjectCard({
           <div className="flex items-center gap-2">
             <Ping />
 
-            <h3 className="flex items-center gap-1 font-bold md:text-lg">
+            <h1 className="flex items-center gap-1 font-bold md:text-lg">
               {title}
               <span
                 className={clsx(
@@ -59,10 +59,10 @@ export default function ProjectCard({
               >
                 <TbArrowUpRight />
               </span>
-            </h3>
+            </h1>
           </div>
 
-          <p className="secondary my-4 text-sm leading-relaxed md:text-base">
+          <p className="secondary my-4 text-sm leading-relaxed md:h-[91px]">
             {description}
           </p>
 

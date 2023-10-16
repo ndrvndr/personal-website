@@ -54,7 +54,7 @@ export default function BlogCard({
     >
       <Link
         href={`/blog/${slug}`}
-        aria-label="Read more"
+        aria-label={`Read more about the ${title} article`}
         className={clsx("group", "flex flex-col", "h-full")}
       >
         <div className="relative">
@@ -85,7 +85,7 @@ export default function BlogCard({
         </div>
 
         <div className="p-4">
-          <h2 className="primary font-bold leading-relaxed md:text-lg lg:h-14">
+          <h2 className="primary font-bold leading-relaxed md:h-[84px] md:text-lg lg:h-14">
             {title}
           </h2>
 
