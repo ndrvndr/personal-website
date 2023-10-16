@@ -18,9 +18,11 @@ export default function Footer() {
         {FOOTER_LINKS.map((link) => (
           <li key={link.label}>
             <Link
-              href="/"
+              href={link.url}
               className="group cursor-pointer"
               aria-label={`Go to ${link.label} page`}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Tooltip placement="top" label={link.toolTip}>
                 <div>

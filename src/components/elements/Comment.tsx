@@ -2,11 +2,15 @@
 import Giscus, { Repo, Theme } from "@giscus/react";
 import { useTheme } from "next-themes";
 
-export default function Comment() {
+export default function Comment({
+  marginTop = "mt-32",
+}: {
+  marginTop?: string;
+}) {
   const { theme } = useTheme();
 
   return (
-    <section className="mt-32 h-fit w-full">
+    <section className={`${marginTop} h-fit w-full`}>
       <Giscus
         id="comments"
         repo={(process.env.NEXT_PUBLIC_GISCUS_REPO as Repo) || ""}

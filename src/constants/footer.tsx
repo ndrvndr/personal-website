@@ -21,27 +21,39 @@ export const FOOTER_ITEMS = [
 ];
 
 export const FOOTER_LINKS = [
-  { label: "Source Code", toolTip: "This website is open source." },
-  { label: "Design", toolTip: "andreavindra.vercel.app color palette." },
+  { label: "Source Code", toolTip: "This website is open source.", url: "/" },
+  {
+    label: "Design",
+    toolTip: "andreavindra.vercel.app color palette.",
+    url: "/",
+  },
   {
     label: "Docs",
     toolTip:
       "Personal documentation about my best practices on web development.",
+    url: "/",
   },
-  { label: "Book Notes", toolTip: "Book Notes" },
-  { label: "Starter Templates", toolTip: "Starter Templates" },
+  { label: "Book Notes", toolTip: "Book Notes", url: "/" },
+  { label: "Starter Templates", toolTip: "Starter Templates", url: "/" },
   {
     label: "Analytics",
     toolTip: "andreavindra.vercel.app views and visitors analytics",
+    url: "/",
   },
-  { label: "Statistics", toolTip: "Blog and Projects statistics" },
+  { label: "Statistics", toolTip: "Blog and Projects statistics", url: "/" },
   {
     label: "Guestbook",
     toolTip: "Leave whatever you like to say-message, appreciation, suggestion",
+    url: "/guestbook",
   },
   {
     label: "Subscribe",
     toolTip: "Get an email whenever i post a blog, no spam",
+    url: "/",
   },
-  { label: "RSS", toolTip: "Add andreavindra.vercel.app blog to your feeds" },
+  {
+    label: "RSS",
+    toolTip: "Add andreavindra.vercel.app blog to your feeds",
+    url: "/",
+  },
 ];
