@@ -6,8 +6,6 @@ import {
   SiNodedotjs,
 } from "react-icons/si";
 
-const ICON_SIZE: number = 32;
-
 export const ABOUT_TEXTS = [
   {
     text: "Hi! I'm Andre. I started learning web development at the beginning of the pandemic. With not much else to do, I decided to begin my web development journey through web development forums. After that, I started watching various YouTube videos to delve deeper into web development, especially in terms of frontend development.",
@@ -22,14 +20,14 @@ export const ABOUT_TEXTS = [
 
 export const FAVORITE_STACKS = [
   {
-    icon: <SiTypescript size={ICON_SIZE} color="#3078C7" />,
+    icon: <SiTypescript color="#3078C7" />,
     name: "Typescript",
   },
   {
-    icon: <SiTailwindcss size={ICON_SIZE} color="#38BDF8" />,
+    icon: <SiTailwindcss color="#38BDF8" />,
     name: "Tailwind",
   },
-  { icon: <SiReact size={ICON_SIZE} color="#149FCB" />, name: "React" },
-  { icon: <SiNextdotjs size={ICON_SIZE} />, name: "Next.js" },
-  { icon: <SiNodedotjs size={ICON_SIZE} color="#418A3F" />, name: "Node.js" },
+  { icon: <SiReact color="#149FCB" />, name: "React" },
+  { icon: <SiNextdotjs />, name: "Next.js" },
+  { icon: <SiNodedotjs color="#418A3F" />, name: "Node.js" },
 ];

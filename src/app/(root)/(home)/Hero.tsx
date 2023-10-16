@@ -37,17 +37,12 @@ export default function Hero() {
 
       <Link
         href="mailto:andreavindra37@gmail.com"
-        aria-label="Send me an email"
+        aria-label="Contact Me"
         className={clsx(
-          "primary cursor-pointer",
+          "primary border__gradient cursor-pointer",
           "flex items-center gap-3",
           "w-fit rounded-md p-3",
           "text-sm font-bold md:text-lg",
-          "border-t border-solid",
-          "border-primary-gradient dark:border-secondary-gradient",
-          "border-opacity-70 dark:border-opacity-30",
-          "shadow-md",
-          "shadow-primary-gradient dark:shadow-secondary-gradient",
         )}
         target="_blank"
         rel="noopener noreferrer"

@@ -11,12 +11,10 @@ export default function Bottombar() {
   return (
     <nav
       className={clsx(
-        "border__color",
-        "fixed bottom-4 left-1/2 -translate-x-1/2",
-        "shadow-md backdrop-blur-3xl",
-        "flex items-center gap-1",
-        "rounded-full p-2",
-        "z-20",
+        "border__gradient backdrop-blur-3xl",
+        "fixed bottom-4 left-1/2 z-20 -translate-x-1/2",
+        "flex items-center justify-evenly",
+        "w-[90vw] max-w-md rounded-full p-2",
         "md:hidden",
       )}
     >
@@ -34,6 +32,7 @@ export default function Bottombar() {
               "h-10 w-10 rounded-full",
               "grid place-items-center",
             )}
+            aria-label={`Go to ${item.pathname}`}
           >
             <span className={isActivePage ? "text-primary-light" : "primary"}>
               {item.icon}
@@ -44,7 +43,7 @@ export default function Bottombar() {
 
       <div
         className={clsx(
-          "mx-2 h-6",
+          "ml-0.5 h-6",
           "border-r border-solid border-neutral-200",
           "dark:border-neutral-800",
         )}

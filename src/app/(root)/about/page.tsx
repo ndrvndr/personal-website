@@ -35,7 +35,9 @@ export default function About() {
             {FAVORITE_STACKS.map((stack) => (
               <li key={stack.name}>
                 <Tooltip placement="top" label={stack.name}>
-                  {stack.icon}
+                  <span className="text-[32px] md:text-[40px]">
+                    {stack.icon}
+                  </span>
                 </Tooltip>
               </li>
             ))}

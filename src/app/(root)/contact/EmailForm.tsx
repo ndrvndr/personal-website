@@ -11,7 +11,9 @@ export default function EmailForm() {
 
   return (
     <section>
-      <h2 className="primary font-semibold md:text-xl">Or send me an email</h2>
+      <h2 className="primary text-lg font-semibold md:text-xl">
+        Or send me an email
+      </h2>
 
       <form onSubmit={handleSubmitForm} className="mt-8">
         <div className="md:flex md:gap-4">

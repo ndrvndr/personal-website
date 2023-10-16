@@ -174,4 +174,8 @@ table {
   .border__color {
     @apply border border-solid border-neutral-200 dark:border-neutral-800;
   }
+
+  .border__gradient {
+    @apply border-t border-solid border-primary-gradient border-opacity-30 shadow-md shadow-primary-gradient dark:border-secondary-gradient dark:border-opacity-30 dark:shadow-secondary-dark;
+  }
 }

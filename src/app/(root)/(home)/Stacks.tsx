@@ -15,7 +15,7 @@ export default function Stacks() {
           "primary",
           "mb-5",
           "flex items-center gap-2",
-          "text-xl md:text-2xl",
+          "text-lg md:text-xl",
         )}
       >
         <HiOutlineCode />

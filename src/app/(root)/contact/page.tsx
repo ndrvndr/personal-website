@@ -18,7 +18,7 @@ export default function Contact() {
       <PageTitle title="Contact" description="Reach me out." />
 
       <section>
-        <h2 className="primary font-semibold md:text-xl">Find me on</h2>
+        <h2 className="primary text-lg font-semibold md:text-xl">Find me on</h2>
 
         <ul className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
           <SocialMediaCard

@@ -15,8 +15,12 @@ export default function Footer() {
         className={clsx("mt-8 text-sm", "flex flex-wrap justify-center gap-5")}
       >
         {FOOTER_LINKS.map((link) => (
-          <Link key={link.label} href="/" className="group cursor-pointer">
-            <li>
+          <li key={link.label}>
+            <Link
+              href="/"
+              className="group cursor-pointer"
+              aria-label={`Go to ${link.label} page`}
+            >
               {link.label}
               <div
                 className={clsx(
@@ -25,8 +29,8 @@ export default function Footer() {
                   "lg:group-hover:w-full",
                 )}
               />
-            </li>
-          </Link>
+            </Link>
+          </li>
         ))}
       </ul>
 
