@@ -13,26 +13,26 @@ export const metadata: Metadata = {
   },
 };
 
-async function getBlogs() {
-  const blogApiEndpoint =
-    process.env.NODE_ENV === "production"
-      ? BLOG_API_ENDPOINT
-      : "http://localhost:3000/api/blog";
+// async function getBlogs() {
+//   const blogApiEndpoint =
+//     process.env.NODE_ENV === "production"
+//       ? BLOG_API_ENDPOINT
+//       : "http://localhost:3000/api/blog";
 
-  const res = await fetch(`${blogApiEndpoint}`, {
-    next: { revalidate: 3600 },
-  });
+//   const res = await fetch(`${blogApiEndpoint}`, {
+//     next: { revalidate: 3600 },
+//   });
 
-  const data = await res.json();
-  return data;
-}
+//   const data = await res.json();
+//   return data;
+// }
 
 export default async function Blog() {
-  const blogs = (await getBlogs()) as BlogItem[];
+  // const blogs = (await getBlogs()) as BlogItem[];
 
   return (
     <div className="p-8">
-      <PageTitle
+      {/* <PageTitle
         title="Blog"
         description="Share thoughts and tutorials on web development."
       />
@@ -56,7 +56,7 @@ export default async function Blog() {
             />
           ))}
         </ul>
-      </section>
+      </section> */}
     </div>
   );
 }

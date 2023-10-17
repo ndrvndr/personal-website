@@ -12,63 +12,63 @@ import { HiOutlineClock, HiOutlineEye } from "react-icons/hi";
 import Article from "./Article";
 import Aside from "./Aside";
 
-async function getBlog(slug: string) {
-  const blogApiEndpoint =
-    process.env.NODE_ENV === "production"
-      ? BLOG_API_ENDPOINT
-      : "http://localhost:3000/api/blog";
+// async function getBlog(slug: string) {
+//   const blogApiEndpoint =
+//     process.env.NODE_ENV === "production"
+//       ? BLOG_API_ENDPOINT
+//       : "http://localhost:3000/api/blog";
 
-  const res = await fetch(`${blogApiEndpoint}?slug=${slug}`, {
-    next: { revalidate: 3600 },
-  });
+//   const res = await fetch(`${blogApiEndpoint}?slug=${slug}`, {
+//     next: { revalidate: 3600 },
+//   });
 
-  if (!res.ok) {
-    notFound();
-  }
+//   if (!res.ok) {
+//     notFound();
+//   }
 
-  const data = await res.json();
-  return data[0];
-}
+//   const data = await res.json();
+//   return data[0];
+// }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string };
-}): Promise<Metadata> {
-  const blog = (await getBlog(params.slug)) as BlogItem;
+// export async function generateMetadata({
+//   params,
+// }: {
+//   params: { slug: string };
+// }): Promise<Metadata> {
+//   const blog = (await getBlog(params.slug)) as BlogItem;
 
-  const { title, description, slug } = blog;
+//   const { title, description, slug } = blog;
 
-  return {
-    title: `${title} | Andre Avindra`,
-    description: description,
-    openGraph: {
-      images: DEFAULT_METADATA.image,
-      url: `https://andreavindra.vercel.app/blog/${slug}`,
-      siteName: DEFAULT_METADATA.siteName,
-      locale: DEFAULT_METADATA.locale,
-      type: "article",
-      authors: "Andre Avindra",
-    },
-    keywords: title,
-    alternates: {
-      canonical: `${process.env.DOMAIN}/${slug}`,
-    },
-  };
-}
+//   return {
+//     title: `${title} | Andre Avindra`,
+//     description: description,
+//     openGraph: {
+//       images: DEFAULT_METADATA.image,
+//       url: `https://andreavindra.vercel.app/blog/${slug}`,
+//       siteName: DEFAULT_METADATA.siteName,
+//       locale: DEFAULT_METADATA.locale,
+//       type: "article",
+//       authors: "Andre Avindra",
+//     },
+//     keywords: title,
+//     alternates: {
+//       canonical: `${process.env.DOMAIN}/${slug}`,
+//     },
+//   };
+// }
 
 export default async function BlogDetails({
   params,
 }: {
   params: { slug: string };
 }) {
-  const blog = (await getBlog(params.slug)) as BlogItem;
+  // const blog = (await getBlog(params.slug)) as BlogItem;
 
-  const { image, title, releaseDate, readingTime, views, content } = blog;
+  // const { image, title, releaseDate, readingTime, views, content } = blog;
 
   return (
     <div className="p-8">
-      <section>
+      {/* <section>
         <Image
           src={image}
           alt="Photo taken from Unsplash"
@@ -109,7 +109,7 @@ export default async function BlogDetails({
         <DonateBox classname="w-64 lg:hidden" />
 
         <Comment />
-      </section>
+      </section> */}
     </div>
   );
 }
