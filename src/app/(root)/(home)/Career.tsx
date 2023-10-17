@@ -1,5 +1,6 @@
 "use client";
 import BreakLine from "@/components/elements/BreakLine";
+import { CV_URL } from "@/constants";
 import clsx from "clsx";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -19,7 +20,7 @@ export default function Career() {
       </div>
 
       <Link
-        href="https://res.cloudinary.com/dqqmzgesp/image/upload/v1697030578/personal-website/cv.jpg"
+        href={CV_URL}
         target="_blank"
         rel="noopener noreferrer"
         className={clsx(

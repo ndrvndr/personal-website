@@ -1,4 +1,5 @@
 "use client";
+import { PROFILE_PICTURE_URL } from "@/constants";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -11,7 +12,7 @@ export default function Header() {
       className="mb-8 flex items-center gap-4 md:hidden"
     >
       <Image
-        src="https://res.cloudinary.com/dqqmzgesp/image/upload/v1697030269/personal-website/profileImage.webp"
+        src={PROFILE_PICTURE_URL}
         alt="Image Profile"
         className="border__color h-11 w-11 rounded-full"
         width={100}

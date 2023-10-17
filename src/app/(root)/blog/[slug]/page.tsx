@@ -1,7 +1,7 @@
 import BreakLine from "@/components/elements/BreakLine";
 import Comment from "@/components/elements/Comment";
 import DonateBox from "@/components/elements/DonateBox";
-import { ENDPOINT } from "@/constants/blog";
+import { BLOG_API_ENDPOINT } from "@/constants";
 import { DEFAULT_METADATA } from "@/constants/metadata";
 import { BlogItem } from "@/types";
 import { format } from "date-fns";
@@ -13,7 +13,12 @@ import Article from "./Article";
 import Aside from "./Aside";
 
 async function getBlog(slug: string) {
-  const res = await fetch(`${ENDPOINT}?slug=${slug}`, {
+  const blogApiEndpoint =
+    process.env.NODE_ENV === "production"
+      ? BLOG_API_ENDPOINT
+      : "http://localhost:3000/api/blog";
+
+  const res = await fetch(`${blogApiEndpoint}?slug=${slug}`, {
     next: { revalidate: 3600 },
   });
 

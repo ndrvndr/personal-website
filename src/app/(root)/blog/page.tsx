@@ -1,6 +1,6 @@
 import BlogCard from "@/components/cards/BlogCard";
 import PageTitle from "@/components/elements/PageTitle";
-import { ENDPOINT } from "@/constants/blog";
+import { BLOG_API_ENDPOINT } from "@/constants";
 import { BlogItem } from "@/types";
 import type { Metadata } from "next";
 import Search from "./Search";
@@ -14,7 +14,12 @@ export const metadata: Metadata = {
 };
 
 async function getBlogs() {
-  const res = await fetch(`${ENDPOINT}`, {
+  const blogApiEndpoint =
+    process.env.NODE_ENV === "production"
+      ? BLOG_API_ENDPOINT
+      : "http://localhost:3000/api/blog";
+
+  const res = await fetch(`${blogApiEndpoint}`, {
     next: { revalidate: 3600 },
   });
 
