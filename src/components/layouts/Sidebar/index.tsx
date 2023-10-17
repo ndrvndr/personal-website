@@ -15,7 +15,7 @@ export default function Sidebar() {
       )}
     >
       <SidebarHeader />
-      <BreakLine />
+      <BreakLine decoration="border-dashed" />
       <SidebarNav />
       <BreakLine classname="md:hidden lg:block" />
       <SpotifyCard display="md:hidden lg:flex" />
