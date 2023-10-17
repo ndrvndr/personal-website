@@ -11,7 +11,7 @@ export default function Career() {
     <motion.section
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.2 }}
+      transition={{ delay: 0.4 }}
     >
       <div className="mb-2 flex items-center gap-2 text-lg md:text-xl">
         <MdOutlineWorkHistory size={20} />

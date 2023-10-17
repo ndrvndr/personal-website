@@ -14,7 +14,7 @@ export default function EmailForm() {
     <motion.section
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.2 }}
+      transition={{ delay: 0.4 }}
     >
       <h2 className="primary text-lg font-semibold md:text-xl">
         Or send me an email

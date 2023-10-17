@@ -20,7 +20,7 @@ export default function ProjectCard({
     <motion.li
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ delay: 0.2 }}
+      transition={{ delay: 0.3 }}
       className={clsx(
         "border__color",
         "rounded-md",

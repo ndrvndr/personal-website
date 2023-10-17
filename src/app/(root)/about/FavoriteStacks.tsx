@@ -9,7 +9,7 @@ export default function FavoriteStacks() {
     <motion.section
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.2 }}
+      transition={{ delay: 0.4 }}
     >
       <h2 className="primary text-lg font-semibold md:text-xl">
         Current Favorite Tech Stacks

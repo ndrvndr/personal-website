@@ -45,7 +45,7 @@ export default function BlogCard({
     <motion.li
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ delay: 0.4 }}
+      transition={{ delay: 0.7 }}
       className={clsx(
         "border__color",
         "rounded-md",

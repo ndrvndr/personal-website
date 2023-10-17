@@ -8,6 +8,7 @@ export default function SocialMediaLinks() {
     <motion.section
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.2 }}
     >
       <h2 className="primary text-lg font-semibold md:text-xl">Find me on</h2>
 

@@ -1,8 +1,15 @@
+"use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function Header() {
   return (
-    <header className="mb-8 flex items-center gap-4 md:hidden">
+    <motion.header
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.2 }}
+      className="mb-8 flex items-center gap-4 md:hidden"
+    >
       <Image
         src="https://res.cloudinary.com/dqqmzgesp/image/upload/v1697030269/personal-website/profileImage.webp"
         alt="Image Profile"
@@ -15,6 +22,6 @@ export default function Header() {
         <h2 className="primary font-medium md:text-lg">ndrvndr</h2>
         <p className="secondary text-sm md:text-base">Λ7214</p>
       </div>
-    </header>
+    </motion.header>
   );
 }
