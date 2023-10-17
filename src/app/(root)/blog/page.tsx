@@ -1,8 +1,8 @@
 import BlogCard from "@/components/cards/BlogCard";
 import PageTitle from "@/components/elements/PageTitle";
+import { ENDPOINT } from "@/constants/blog";
 import { BlogItem } from "@/types";
 import type { Metadata } from "next";
-import { getBlog } from "../../../../sanity/action";
 import Search from "./Search";
 
 export const metadata: Metadata = {
@@ -13,12 +13,17 @@ export const metadata: Metadata = {
   },
 };
 
+async function getBlogs() {
+  const res = await fetch(`${ENDPOINT}`, {
+    next: { revalidate: 3600 },
+  });
+
+  const data = await res.json();
+  return data;
+}
+
 export default async function Blog() {
-  const blogs = (await getBlog({
-    query: "",
-    tags: "",
-    page: "1",
-  })) as BlogItem[];
+  const blogs = (await getBlogs()) as BlogItem[];
 
   return (
     <div className="p-8">

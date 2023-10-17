@@ -1,28 +1,38 @@
 import BreakLine from "@/components/elements/BreakLine";
+import Comment from "@/components/elements/Comment";
 import DonateBox from "@/components/elements/DonateBox";
+import { ENDPOINT } from "@/constants/blog";
 import { DEFAULT_METADATA } from "@/constants/metadata";
 import { BlogItem } from "@/types";
 import { format } from "date-fns";
 import type { Metadata } from "next";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 import { HiOutlineClock, HiOutlineEye } from "react-icons/hi";
-import { getBlog } from "../../../../../sanity/action";
 import Article from "./Article";
 import Aside from "./Aside";
-import Comment from "@/components/elements/Comment";
+
+async function getBlog(slug: string) {
+  const res = await fetch(`${ENDPOINT}?slug=${slug}`, {
+    next: { revalidate: 3600 },
+  });
+
+  if (!res.ok) {
+    notFound();
+  }
+
+  const data = await res.json();
+  return data[0];
+}
 
 export async function generateMetadata({
   params,
 }: {
   params: { slug: string };
 }): Promise<Metadata> {
-  const blog = (await getBlog({
-    query: params.slug,
-    tags: "",
-    page: "1",
-  })) as BlogItem[];
+  const blog = (await getBlog(params.slug)) as BlogItem;
 
-  const { title, description, slug } = blog[0];
+  const { title, description, slug } = blog;
 
   return {
     title: `${title} | Andre Avindra`,
@@ -47,13 +57,9 @@ export default async function BlogDetails({
 }: {
   params: { slug: string };
 }) {
-  const blog = (await getBlog({
-    query: params.slug,
-    tags: "",
-    page: "1",
-  })) as BlogItem[];
+  const blog = (await getBlog(params.slug)) as BlogItem;
 
-  const { image, title, releaseDate, readingTime, views, content } = blog[0];
+  const { image, title, releaseDate, readingTime, views, content } = blog;
 
   return (
     <div className="p-8">

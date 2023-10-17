@@ -18,8 +18,9 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   return (
     <motion.li
-      initial={{ opacity: 0, scale: 0.8 }}
-      animate={{ opacity: 1, scale: 1 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.2 }}
       className={clsx(
         "border__color",
         "rounded-md",

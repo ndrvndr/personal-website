@@ -30,9 +30,6 @@ export const getBlog = async (params: GetBlogsParams) => {
         tags,
         content,
       }`,
-      {
-        next: { revalidate: 3600 },
-      },
     );
 
     return blogs;

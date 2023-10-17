@@ -21,7 +21,11 @@ export const FOOTER_ITEMS = [
 ];
 
 export const FOOTER_LINKS = [
-  { label: "Source Code", toolTip: "This website is open source.", url: "/" },
+  {
+    label: "Source Code",
+    toolTip: "This website is open source.",
+    url: "https://github.com/ndrvndr/personal-website",
+  },
   {
     label: "Design",
     toolTip: "andreavindra.vercel.app color palette.",
