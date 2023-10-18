@@ -19,10 +19,12 @@ export default function Footer() {
           <li key={link.label}>
             <Link
               href={link.url}
-              className="group cursor-pointer"
+              className={`group ${
+                link.target === "_blank" && "cursor-pointer"
+              }`}
               aria-label={`Go to ${link.label} page`}
-              target="_blank"
-              rel="noopener noreferrer"
+              target={link.target}
+              rel={link.rel}
             >
               <Tooltip placement="top" label={link.toolTip}>
                 <div>

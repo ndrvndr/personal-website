@@ -37,6 +37,7 @@ export default async function SpotifyCard({ display }: { display: string }) {
             alt={album || ""}
             width={64}
             height={64}
+            priority
           />
         ) : (
           <SiSpotify size={64} color={"#1ED760"} />
