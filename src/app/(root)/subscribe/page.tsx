@@ -1,5 +1,6 @@
 import PageTitle from "@/components/elements/PageTitle";
 import type { Metadata } from "next";
+import SubscribeSection from "./SubsribeSection";
 
 export const metadata: Metadata = {
   title: "Subscribe | Andre Avindra",
@@ -14,7 +15,8 @@ export default function Subscribe() {
   return (
     <div className="p-8">
       <PageTitle title="Subscribe" description="Subscribe to my newsletter." />
-      <section></section>
+
+      <SubscribeSection />
     </div>
   );
 }
