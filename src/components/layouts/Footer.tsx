@@ -54,14 +54,14 @@ export default function Footer() {
       </p>
 
       <ul className="flex justify-center gap-4">
-        {FOOTER_ITEMS.map(({ icon, href, ariaLabel }, index) => (
+        {FOOTER_ITEMS.map(({ icon, href, ariaLabel, target, rel }, index) => (
           <li key={index}>
             <Link
               href={href}
               aria-label={ariaLabel}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cursor-pointer"
+              target={target}
+              rel={rel}
+              className={`${target === "_blank" && "cursor-pointer"}`}
             >
               {icon}
             </Link>

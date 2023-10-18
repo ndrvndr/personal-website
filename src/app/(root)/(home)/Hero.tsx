@@ -43,7 +43,7 @@ export default function Hero() {
       </div>
 
       <Link
-        href="mailto:andreavindra37@gmail.com"
+        href="/contact"
         aria-label="Contact Me"
         className={clsx(
           "primary border__gradient cursor-pointer",
@@ -51,8 +51,6 @@ export default function Hero() {
           "w-fit rounded-md p-3",
           "text-sm font-bold md:text-lg",
         )}
-        target="_blank"
-        rel="noopener noreferrer"
       >
         <SiGmail />
         Contact Me

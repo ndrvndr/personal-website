@@ -5,18 +5,24 @@ const ICON_SIZE: number = 24;
 export const FOOTER_ITEMS = [
   {
     icon: <FiMail size={ICON_SIZE} />,
-    href: "mailto:andreavindra37@gmail.com",
+    href: "/contact",
     ariaLabel: "Send me an email",
+    target: "",
+    rel: "",
   },
   {
     icon: <FiLinkedin size={ICON_SIZE} />,
     href: "https://www.linkedin.com/in/andre-avindra/",
     ariaLabel: "LinkedIn",
+    target: "_blank",
+    rel: "noopener noreferrer",
   },
   {
     icon: <FiGithub size={ICON_SIZE} />,
     href: "https://github.com/ndrvndr",
     ariaLabel: "GitHub",
+    target: "_blank",
+    rel: "noopener noreferrer",
   },
 ];
 
@@ -89,7 +95,7 @@ export const FOOTER_LINKS = [
   {
     label: "RSS",
     toolTip: "Add andreavindra.vercel.app blog to your feeds",
-    url: "https://andreavindra.vercel.app/rss.xml",
+    url: "/rss.xml",
     target: "_blank",
     rel: "noopener noreferrer",
   },
