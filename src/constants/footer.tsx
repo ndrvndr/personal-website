@@ -40,6 +40,12 @@ export const FOOTER_LINKS = [
   { label: "Book Notes", toolTip: "Book Notes", url: "/" },
   { label: "Starter Templates", toolTip: "Starter Templates", url: "/" },
   {
+    label: "Audits",
+    toolTip:
+      "Real-time performance report for andreavindra.vercel.app based on the Pagespeed API",
+    url: "/audits",
+  },
+  {
     label: "Analytics",
     toolTip: "andreavindra.vercel.app views and visitors analytics",
     url: "/",
