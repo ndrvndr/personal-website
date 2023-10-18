@@ -46,7 +46,7 @@ export const FOOTER_LINKS = [
   {
     label: "Starter Templates",
     toolTip: "Starter Templates",
-    url: "/",
+    url: "https://github.com/ndrvndr?tab=repositories&q=starter",
     target: "_blank",
     rel: "noopener noreferrer",
   },
@@ -67,8 +67,8 @@ export const FOOTER_LINKS = [
   },
   {
     label: "Statistics",
-    toolTip: "Blog and Projects statistics",
-    url: "/",
+    toolTip: "Blogs statistics",
+    url: "/statistics",
     target: "",
     rel: "",
   },
@@ -82,14 +82,14 @@ export const FOOTER_LINKS = [
   {
     label: "Subscribe",
     toolTip: "Get an email whenever i post a blog, no spam",
-    url: "/",
+    url: "/subscribe",
     target: "",
     rel: "",
   },
   {
     label: "RSS",
     toolTip: "Add andreavindra.vercel.app blog to your feeds",
-    url: "/",
+    url: "https://andreavindra.vercel.app/rss.xml",
     target: "_blank",
     rel: "noopener noreferrer",
   },
