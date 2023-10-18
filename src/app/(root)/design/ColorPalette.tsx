@@ -23,20 +23,6 @@ export default function ColorPalette() {
             colorClassname={color.colorClassName}
           />
         ))}
-
-        <div className={clsx("mt-4 flex items-center gap-2")}>
-          <div
-            className={clsx(
-              "bg-gradient-linear",
-              "h-10 w-10 rounded",
-              "border__color",
-            )}
-          />
-          <div className="flex flex-col gap-1">
-            <p>Gradient</p>
-            <p className="secondary text-sm">#B3ffab to #12fff7</p>
-          </div>
-        </div>
       </div>
     </motion.section>
   );

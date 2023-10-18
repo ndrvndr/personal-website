@@ -8,7 +8,10 @@ export default function ColorSwatch({
   return (
     <div className={clsx("mt-4 flex items-center gap-2")}>
       <div
-        style={{ backgroundColor: colorClassname }}
+        style={{
+          backgroundColor: colorClassname,
+          backgroundImage: colorClassname,
+        }}
         className={clsx(
           "h-10 w-10 rounded",
           "shadow-sm dark:shadow-none",
