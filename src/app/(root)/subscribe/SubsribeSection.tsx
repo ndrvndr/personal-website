@@ -8,13 +8,11 @@ export default function SubscribeSection() {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2 }}
-      className="flex flex-col items-center pb-12 pt-20 text-center"
+      className="flex flex-col items-center text-center"
     >
-      <h2 className="primary text-2xl font-bold md:text-4xl">
+      <h2 className="primary text-xl font-bold md:text-3xl">
         Subscribe to{" "}
-        <div className="gradient__text inline-block md:mt-2">
-          andreavindra.vercel.app
-        </div>
+        <span className="gradient__text ">andreavindra.vercel.app</span>
       </h2>
 
       <SubscribeCard />

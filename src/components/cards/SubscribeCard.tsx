@@ -1,9 +1,13 @@
 import clsx from "clsx";
+import { motion } from "framer-motion";
 import Link from "next/link";
 
 export default function SubscribeCard() {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.4 }}
       className={clsx(
         "border__color",
         "flex flex-col gap-4",
@@ -24,6 +28,6 @@ export default function SubscribeCard() {
       >
         Subscribe Now
       </Link>
-    </div>
+    </motion.div>
   );
 }

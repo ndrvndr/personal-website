@@ -1,6 +1,6 @@
-import Comment from "@/components/elements/Comment";
 import PageTitle from "@/components/elements/PageTitle";
 import type { Metadata } from "next";
+import DiscussionSection from "./DiscussionSection";
 
 export const metadata: Metadata = {
   title: "Guestbook | Andre Avindra",
@@ -18,9 +18,7 @@ export default function Guestbook() {
         title="Guestbook"
         description="Leave whatever you like to say on the AMA discussion"
       />
-      <section>
-        <Comment marginTop="mt-0" />
-      </section>
+      <DiscussionSection />
     </div>
   );
 }

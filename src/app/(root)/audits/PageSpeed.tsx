@@ -29,11 +29,23 @@ export default function PageSpeed() {
 
   return (
     <section className="m-auto w-fit">
-      <motion.div
+      <motion.h2
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
-        className="mb-8 flex flex-wrap justify-center gap-2 text-sm"
+        className="primary text-center text-xl font-bold md:text-3xl"
+      >
+        <div className="gradient__text inline-block">
+          andreavindra.vercel.app{" "}
+        </div>{" "}
+        performance
+      </motion.h2>
+
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4 }}
+        className="my-8 flex flex-wrap justify-center gap-2 text-sm"
       >
         {TAGS.map((tag) => (
           <button
@@ -42,6 +54,7 @@ export default function PageSpeed() {
             className={clsx(
               "primary",
               "px-1.5 py-0.5",
+              "text-base md:text-lg",
               "rounded-md font-medium",
               "bg-neutral-200 dark:bg-neutral-800",
             )}
@@ -63,18 +76,20 @@ export default function PageSpeed() {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          className="flex flex-col justify-between gap-8 md:flex-row"
+          transition={{ delay: 0.6 }}
+          className="flex flex-col justify-evenly gap-8 md:flex-row md:gap-0"
         >
           {categoriesInArray.map((category) => (
             <div key={category.id} className="flex flex-col items-center">
               <CircularProgress value={Number(category.score || 0) * 100} />
-              <h2 className="primary mt-2 text-center text-sm">
+              <h2 className="primary mt-2 text-center text-sm md:text-base">
                 {category.title}
               </h2>
             </div>
           ))}
         </motion.div>
       )}
+      {/* <CircularProgressLoading /> */}
     </section>
   );
 }
