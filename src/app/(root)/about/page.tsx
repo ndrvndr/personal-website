@@ -6,7 +6,8 @@ import FavoriteStacks from "./FavoriteStacks";
 
 export const metadata: Metadata = {
   title: "About | Andre Avindra",
-  description: "Short story about Andre Avindra",
+  description:
+    "Andre, a front-end developer who embarked on his learning journey in 2022, shares his insights and thoughts for comprehending various aspects of front-end development through his blog posts.",
   alternates: {
     canonical: "https://andreavindra.vercel.app/about",
   },

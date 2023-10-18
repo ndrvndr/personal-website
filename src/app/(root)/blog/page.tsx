@@ -7,7 +7,8 @@ import Search from "./Search";
 
 export const metadata: Metadata = {
   title: "Blog | Andre Avindra",
-  description: "Share thoughts and tutorials on web development",
+  description:
+    "Reflections, cognitive models, and instructional content related to the realm of front-end development. Adapt your mental framework to bring more predictability to front-end development.",
   alternates: {
     canonical: "https://andreavindra.vercel.app/blog",
   },

@@ -5,7 +5,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Projects | Andre Avindra",
-  description: "Showcase of my works on frontend development.",
+  description:
+    "Discover my portfolio of frontend development projects, a curated collection showcasing my skills and creativity in web design and development. Immerse yourself in a diverse range of web solutions and innovative designs.",
   alternates: {
     canonical: "https://andreavindra.vercel.app/projects",
   },

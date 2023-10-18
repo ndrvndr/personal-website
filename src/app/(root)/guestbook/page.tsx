@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Guestbook | Andre Avindra",
   description:
-    "Leave whatever you like to say-message, appreciation, or suggestion on the Ask Me Anything (AMA) discussion",
+    "Feel free to share your thoughts, expressions of appreciation, and suggestions on the guestbook page. Leave behind any messages or comments you'd like to convey. Your words are valuable, and I look forward to hearing from you.",
   alternates: {
     canonical: "https://andreavindra.vercel.app/guestbook",
   },
