@@ -1,7 +1,5 @@
-"use client";
 import clsx from "clsx";
 import { format } from "date-fns";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { HiOutlineClock, HiOutlineEye } from "react-icons/hi";
@@ -42,10 +40,7 @@ export default function BlogCard({
   };
 
   return (
-    <motion.li
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 0.7 }}
+    <li
       className={clsx(
         "border__color",
         "rounded-md",
@@ -114,6 +109,6 @@ export default function BlogCard({
           <p className="secondary text-sm leading-relaxed">{description}</p>
         </div>
       </Link>
-    </motion.li>
+    </li>
   );
 }

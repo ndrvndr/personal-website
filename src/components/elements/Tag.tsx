@@ -1,17 +1,12 @@
 import clsx from "clsx";
-import { useState } from "react";
 
-export default function Tag({ tag, onTagClick }: TagProps) {
-  const [isClicked, setIsClicked] = useState(false);
-
-  const handleClick = () => {
-    setIsClicked(!isClicked);
-    onTagClick(tag);
-  };
-
+export default function Tag({
+  children,
+  ...rest
+}: React.ComponentPropsWithoutRef<"button">) {
   return (
     <button
-      onClick={handleClick}
+      {...rest}
       className={clsx(
         "primary",
         "px-1.5 py-0.5",
@@ -21,14 +16,7 @@ export default function Tag({ tag, onTagClick }: TagProps) {
         "disabled:bg-opacity-20 disabled:text-opacity-20",
       )}
     >
-      <span className={clsx(isClicked ? "gradient__text" : "primary")}>
-        {tag}
-      </span>
+      {children}
     </button>
   );
-}
-
-interface TagProps {
-  tag: string;
-  onTagClick: (tag: string) => void;
 }

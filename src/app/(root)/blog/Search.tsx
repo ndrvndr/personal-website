@@ -5,7 +5,13 @@ import clsx from "clsx";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-export default function Search() {
+export default function Search({
+  search,
+  handleSearch,
+  toggleTag,
+  checkTagged,
+  checkDisabled,
+}: SearchProps) {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
   const handleTagClick = (tag: string) => {
@@ -30,7 +36,8 @@ export default function Search() {
           id="search"
           type="search"
           placeholder="Search..."
-          value={selectedTags}
+          value={search}
+          onChange={handleSearch}
           className={clsx(
             "border__color",
             "secondary text-sm",
@@ -40,6 +47,7 @@ export default function Search() {
             "focus:outline-double focus:outline-neutral-500",
             "md:text-base md:placeholder:text-base",
           )}
+          autoComplete="off"
         />
       </motion.div>
 
@@ -51,9 +59,27 @@ export default function Search() {
       >
         <span className="primary text-sm md:text-base">Choose topic:</span>
         {TAGS.map((tag) => (
-          <Tag key={tag} tag={tag} onTagClick={handleTagClick} />
+          <Tag
+            key={tag}
+            onClick={() => toggleTag(tag)}
+            disabled={checkDisabled(tag)}
+          >
+            {checkTagged(tag) ? (
+              <span className="gradient__text">{tag}</span>
+            ) : (
+              tag
+            )}
+          </Tag>
         ))}
       </motion.div>
     </>
   );
+}
+
+interface SearchProps {
+  search: string;
+  handleSearch: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  toggleTag: (tag: string) => void;
+  checkTagged: (tag: string) => boolean;
+  checkDisabled: (tag: string) => boolean;
 }
