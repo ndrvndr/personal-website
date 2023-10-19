@@ -3,7 +3,7 @@ import Giscus, { Repo, Theme } from "@giscus/react";
 import { useTheme } from "next-themes";
 
 export default function Comment({
-  marginTop = "mt-32",
+  marginTop = "mt-16",
 }: {
   marginTop?: string;
 }) {

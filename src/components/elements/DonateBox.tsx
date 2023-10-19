@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function DonateBox({ classname }: { classname: string }) {
   return (
-    <div className={`${classname} m-auto mt-8 h-auto`}>
+    <div className={`${classname} m-auto mt-4 h-auto`}>
       <Link
         href="https://sociabuzz.com/ndrvndr"
         aria-label="give support to this website"
