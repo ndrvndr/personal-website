@@ -1,3 +1,4 @@
+"use client";
 import clsx from "clsx";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -23,8 +24,14 @@ export default function SubscribeCard() {
         new blog content, with no spam.
       </p>
       <Link
-        className="primary border__gradient w-fit px-4 py-2.5 text-sm font-bold md:text-base"
-        href="/subscribe"
+        className={clsx(
+          "primary border__gradient cursor-pointer",
+          "w-fit px-4 py-2.5",
+          "text-sm font-bold md:text-base",
+        )}
+        href="https://andreavindra.substack.com/"
+        target="_blank"
+        rel="noopener noreferrer"
       >
         Subscribe Now
       </Link>
