@@ -18,7 +18,10 @@ export default function Home() {
   return (
     <>
       <div className="px-8 pb-5 pt-8">
-        <PageTitle title="Home" description="Personal website and blog." />
+        <PageTitle
+          title="Home"
+          description="Introduction and Professional Career Journey."
+        />
         <Header />
         <Hero />
         <Career />
