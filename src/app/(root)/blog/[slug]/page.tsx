@@ -1,3 +1,4 @@
+import SubscribeCard from "@/components/cards/SubscribeCard";
 import BreakLine from "@/components/elements/BreakLine";
 import Comment from "@/components/elements/Comment";
 import DonateBox from "@/components/elements/DonateBox";
@@ -107,6 +108,8 @@ export default async function BlogDetails({
         </div>
 
         <DonateBox classname="w-64 lg:hidden" />
+
+        <SubscribeCard />
 
         <Comment />
       </section>
