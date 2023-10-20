@@ -13,6 +13,7 @@ import "react-toastify/dist/ReactToastify.css";
 interface EmailForm {
   name: string;
   email: string;
+  subject: string;
   message: string;
 }
 
@@ -60,6 +61,7 @@ export default function EmailForm() {
         <div className="md:flex md:gap-4">
           <InputForm
             name="name"
+            type="text"
             rule={{ required: true }}
             register={register}
             error={errors}
@@ -67,12 +69,22 @@ export default function EmailForm() {
           />
           <InputForm
             name="email"
+            type="email"
             rule={{ required: true }}
             register={register}
             error={errors}
             placeholder="Enter your email"
           />
         </div>
+
+        <InputForm
+          name="subject"
+          type="text"
+          rule={{ required: true }}
+          register={register}
+          error={errors}
+          placeholder="Enter your subject"
+        />
 
         <Textarea
           name="message"

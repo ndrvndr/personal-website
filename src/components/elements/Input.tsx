@@ -9,6 +9,7 @@ import {
 
 export default function InputForm<TFormValue extends FieldValues>({
   name,
+  type,
   rule,
   error,
   register,
@@ -30,7 +31,7 @@ export default function InputForm<TFormValue extends FieldValues>({
 
       <input
         id={name}
-        type={name}
+        type={type}
         placeholder={placeholder}
         {...register(name, rule)}
         className={clsx(
@@ -50,6 +51,7 @@ export default function InputForm<TFormValue extends FieldValues>({
 
 type InputFormProps<TFormValue extends FieldValues> = {
   name: Path<TFormValue>;
+  type: string;
   rule?: RegisterOptions;
   error: FieldErrors;
   register: UseFormRegister<TFormValue>;
