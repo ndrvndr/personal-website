@@ -1,22 +1,21 @@
-import { getNowPlaying } from "@/lib/songPlayingNow";
+"use client";
+import { fetcher } from "@/services/fetcher";
 import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
 import { SiSpotify } from "react-icons/si";
+import useSWR from "swr";
 
-export default async function SpotifyCard({ display }: { display: string }) {
-  const songPlayingNow = await getNowPlaying();
-
-  const { isPlaying, songUrl, album, albumImageUrl, artist, title } =
-    songPlayingNow;
+export default function SpotifyCard({ display }: { display: string }) {
+  const { data } = useSWR("/api/spotify", fetcher);
 
   return (
     <Link
       target="_blank"
       rel="noopener noreferer"
       href={
-        isPlaying && songUrl
-          ? songUrl
+        data?.isPlaying
+          ? data.songUrl
           : "https://open.spotify.com/user/vwg28n9kqnigrvv34x96si8a6"
       }
       className={clsx(
@@ -30,11 +29,11 @@ export default async function SpotifyCard({ display }: { display: string }) {
       )}
     >
       <div className="w-16">
-        {isPlaying ? (
+        {data?.isPlaying ? (
           <Image
             className="h-auto w-auto"
-            src={albumImageUrl || ""}
-            alt={album || ""}
+            src={data.albumImageUrl}
+            alt={data.album}
             width={64}
             height={64}
             priority
@@ -46,9 +45,11 @@ export default async function SpotifyCard({ display }: { display: string }) {
 
       <div className="flex-1">
         <p className="font-medium leading-tight">
-          {isPlaying ? title : "Not Listening"}
+          {data?.isPlaying ? data.title : "Not Listening"}
         </p>
-        <p className="mt-1 text-xs">{isPlaying ? artist : "Spotify"}</p>
+        <p className="mt-1 text-xs">
+          {data?.isPlaying ? data.artist : "Spotify"}
+        </p>
       </div>
       <div className="absolute bottom-2 right-2">
         <SiSpotify size={20} color={"#1ED760"} />

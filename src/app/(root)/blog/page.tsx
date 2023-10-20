@@ -1,8 +1,10 @@
 import PageTitle from "@/components/elements/PageTitle";
-import { BLOG_API_ENDPOINT } from "@/constants";
+import { getBlog } from "@/services/blog";
 import { BlogItem } from "@/types";
 import type { Metadata } from "next";
 import BlogSection from "./[slug]/BlogSection";
+
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "Blog | Andre Avindra",
@@ -13,22 +15,8 @@ export const metadata: Metadata = {
   },
 };
 
-async function getBlogs() {
-  const blogApiEndpoint =
-    process.env.NODE_ENV === "production"
-      ? BLOG_API_ENDPOINT
-      : "http://localhost:3000/api/blog";
-
-  const res = await fetch(`${blogApiEndpoint}`, {
-    next: { revalidate: 3600 },
-  });
-
-  const data = await res.json();
-  return data;
-}
-
 export default async function Blog() {
-  const blogs = (await getBlogs()) as BlogItem[];
+  const blogs = (await getBlog()) as BlogItem[];
 
   return (
     <div className="p-8">

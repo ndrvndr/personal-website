@@ -4,16 +4,16 @@ import { getBlog } from "../../../../sanity/action";
 export async function GET(request: NextRequest) {
   const slug = request.nextUrl.searchParams.get("slug");
 
-  const res = await getBlog({
+  const response = await getBlog({
     query: slug || "",
     tags: "",
     page: "1",
   });
 
-  if (Array.isArray(res) && res.length === 0) {
-    return NextResponse.json([], { status: 404 });
+  if (Array.isArray(response) && response.length === 0) {
+    return NextResponse.json({ status: 404 });
   }
 
-  const data = await res;
+  const data = await response;
   return NextResponse.json(data, { status: 200 });
 }
