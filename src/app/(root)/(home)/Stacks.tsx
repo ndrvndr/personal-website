@@ -32,9 +32,8 @@ export default function Stacks() {
       <div
         className={clsx(
           "flex flex-col",
-          "md:max-w-[599px]",
-          "lg:max-w-[683px]",
-          "min-[1041px]:max-w-[700px]",
+          "md:max-w-[calc(100vw-156px)]",
+          "lg:max-w-[720px]",
         )}
       >
         {Array.from({ length: 2 }, (_, index) => {

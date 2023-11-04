@@ -51,7 +51,7 @@ export default function SpotifyCard({ display }: { display: string }) {
           {data?.isPlaying ? data.artist : "Spotify"}
         </p>
       </div>
-      <div className="absolute bottom-2 right-2">
+      <div className="absolute bottom-1.5 right-1.5">
         <SiSpotify size={20} color={"#1ED760"} />
       </div>
     </Link>

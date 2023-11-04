@@ -50,6 +50,7 @@ export default function Hero() {
           "flex items-center gap-3",
           "w-fit rounded-md p-3",
           "text-sm font-bold md:text-lg",
+          "lg:mb-[39px]",
         )}
       >
         <SiGmail />
