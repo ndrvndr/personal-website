@@ -1,8 +1,10 @@
 "use client";
 import BreakLine from "@/components/elements/BreakLine";
 import { CV_URL } from "@/constants";
+import { CAREERS_LIST } from "@/constants/home";
 import clsx from "clsx";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { BiSolidDownvote } from "react-icons/bi";
 import { MdOutlineWorkHistory } from "react-icons/md";
@@ -44,24 +46,39 @@ export default function Career() {
       </Link>
 
       <div className="grid gap-4 md:grid-cols-2">
-        {Array.from({ length: 3 }).map((_, index) => (
+        {CAREERS_LIST.map((career, index) => (
           <div
             key={index}
             className={clsx(
               "w-full px-6 py-4",
-              "flex items-center justify-around",
+              "grid grid-cols-3 place-items-center gap-4",
               "border border-solid border-neutral-500",
-              "animate-pulse rounded-md shadow-md",
+              "rounded-md shadow-md",
             )}
           >
-            <div className="h-14 w-14 rounded-full bg-neutral-500" />
-            <div className="flex flex-col gap-2">
-              {Array.from({ length: 4 }).map((_, index) => (
-                <div
-                  key={index}
-                  className="h-4 w-32 rounded-xl bg-neutral-500"
-                />
-              ))}
+            <div className="col-span-1 h-14 w-14 rounded-full">
+              <Image
+                src={career.imageUrl}
+                alt="Sinar Digital Nusantara Logo"
+                width={200}
+                height={200}
+              />
+            </div>
+            <div className="col-span-2 flex grid-cols-2 flex-col gap-2">
+              <p className="primary font-medium lg:text-lg">{career.role}</p>
+              <h3 className="secondary text-sm lg:text-base">
+                <Link
+                  href="https://sinardigital.co.id/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="cursor-pointer underline underline-offset-2"
+                  aria-activedescendant={career.ariaLabel}
+                >
+                  {career.companyName}
+                </Link>{" "}
+                • {career.location}
+              </h3>
+              <p className="secondary text-sm lg:text-base">{`${career.startWork} - Present`}</p>
             </div>
           </div>
         ))}
