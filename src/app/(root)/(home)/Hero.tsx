@@ -46,7 +46,7 @@ export default function Hero() {
         href="/contact"
         aria-label="Contact Me"
         className={clsx(
-          "primary border__gradient cursor-pointer",
+          "primary border__gradient",
           "flex items-center gap-3",
           "w-fit rounded-md p-3",
           "text-sm font-bold md:text-lg",
