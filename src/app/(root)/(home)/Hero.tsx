@@ -39,7 +39,9 @@ export default function Hero() {
 
       <div className="mb-4 flex items-center gap-2">
         <Ping />
-        <p className="primary text-sm md:text-lg">Available for hire</p>
+        <p className="primary text-sm line-through md:text-lg">
+          Available for hire
+        </p>
       </div>
 
       <Link

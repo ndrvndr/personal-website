@@ -68,7 +68,7 @@ export default function Career() {
               <p className="primary font-medium lg:text-lg">{career.role}</p>
               <h3 className="secondary text-sm lg:text-base">
                 <Link
-                  href="https://sinardigital.co.id/"
+                  href="https://teknologidigital.co.id/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="cursor-pointer underline underline-offset-2"

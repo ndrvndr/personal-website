@@ -10,11 +10,11 @@ interface CareerList {
 export const CAREERS_LIST: CareerList[] = [
   {
     imageUrl:
-      "https://res.cloudinary.com/dqqmzgesp/image/upload/v1699082312/personal-website/careers/sinar-digital-nusantara-logo.png",
+      "https://res.cloudinary.com/dqqmzgesp/image/upload/v1711593062/teknologi_digital_terdepan_logo.jpg",
     role: "Frontend Developer",
-    companyName: "Sinar Digital Nusantara",
-    location: "South Jakarta",
+    companyName: "Teknologi Digital Terdepan",
+    location: "Bandung City",
     startWork: "October 2023",
-    ariaLabel: "Visit the Sinar Digital Nusantara Company Profile",
+    ariaLabel: "Visit the Teknologi Digital Terdepan Company Profile",
   },
 ];

@@ -7,7 +7,7 @@ export default function Ping() {
         className={clsx(
           "absolute inline-flex",
           "h-full w-full",
-          "animate-ping rounded-full",
+          "rounded-full",
           "bg-gradient-linear opacity-75",
         )}
       />
