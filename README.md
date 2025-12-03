@@ -6,6 +6,9 @@ Personal website and blogs built using TypeScript, Next.js, Tailwind CSS, and Sa
 
 </div>
 
+## GitAds Sponsored
+[![Sponsored by GitAds](https://gitads.dev/v1/ad-serve?source=ndrvndr/personal-website@github)](https://gitads.dev/v1/ad-track?source=ndrvndr/personal-website@github)
+
 ## Run Locally
 
 Clone the project
