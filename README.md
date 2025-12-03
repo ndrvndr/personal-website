@@ -91,3 +91,6 @@ To run this project, you will need to add the following environment variables to
 If you have any feedback, please reach out to me at andreavindra37@gmail.com
 
 <!-- GitAds-Verify: Y6LN7DLZ4F1FZ71DVUF4OC352M71Y5UD -->
+
+## GitAds Sponsored
+[![Sponsored by GitAds](https://gitads.dev/v1/ad-serve?source=ndrvndr/personal-website@github)](https://gitads.dev/v1/ad-track?source=ndrvndr/personal-website@github)
