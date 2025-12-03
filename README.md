@@ -89,3 +89,5 @@ To run this project, you will need to add the following environment variables to
 ## Feedback
 
 If you have any feedback, please reach out to me at andreavindra37@gmail.com
+
+<!-- GitAds-Verify: Y6LN7DLZ4F1FZ71DVUF4OC352M71Y5UD -->
