@@ -41,21 +41,21 @@ export const FOOTER_LINKS = [
     target: "",
     rel: "",
   },
-  {
-    label: "Docs",
-    toolTip:
-      "Personal documentation about my best practices on web development.",
-    url: "/",
-    target: "_blank",
-    rel: "noopener noreferrer",
-  },
-  {
-    label: "Starter Templates",
-    toolTip: "Starter Templates",
-    url: "https://github.com/ndrvndr?tab=repositories&q=starter",
-    target: "_blank",
-    rel: "noopener noreferrer",
-  },
+  // {
+  //   label: "Docs",
+  //   toolTip:
+  //     "Personal documentation about my best practices on web development.",
+  //   url: "/",
+  //   target: "_blank",
+  //   rel: "noopener noreferrer",
+  // },
+  // {
+  //   label: "Starter Templates",
+  //   toolTip: "Starter Templates",
+  //   url: "https://github.com/ndrvndr?tab=repositories&q=starter",
+  //   target: "_blank",
+  //   rel: "noopener noreferrer",
+  // },
   {
     label: "Audits",
     toolTip:
@@ -64,20 +64,20 @@ export const FOOTER_LINKS = [
     target: "",
     rel: "",
   },
-  {
-    label: "Analytics",
-    toolTip: "andreavindra.vercel.app views and visitors analytics",
-    url: "/",
-    target: "_blank",
-    rel: "noopener noreferrer",
-  },
-  {
-    label: "Statistics",
-    toolTip: "Blogs statistics",
-    url: "/statistics",
-    target: "",
-    rel: "",
-  },
+  // {
+  //   label: "Analytics",
+  //   toolTip: "andreavindra.vercel.app views and visitors analytics",
+  //   url: "/",
+  //   target: "_blank",
+  //   rel: "noopener noreferrer",
+  // },
+  // {
+  //   label: "Statistics",
+  //   toolTip: "Blogs statistics",
+  //   url: "/statistics",
+  //   target: "",
+  //   rel: "",
+  // },
   {
     label: "Guestbook",
     toolTip: "Leave whatever you like to say-message, appreciation, suggestion",
