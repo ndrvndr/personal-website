@@ -49,8 +49,8 @@ export default function Textarea<TFormValue extends FieldValues>({
 
 type TextAreaProps<TFormValue extends FieldValues> = {
   name: Path<TFormValue>;
-  rule?: RegisterOptions;
-  error: FieldErrors;
+  rule?: RegisterOptions<TFormValue, Path<TFormValue>>;
+  error: FieldErrors<TFormValue>;
   register: UseFormRegister<TFormValue>;
   placeholder: string;
 };

@@ -41,22 +41,9 @@ export const getBlog = async (params: GetBlogsParams) => {
 
 export async function incrementViews(blogId: string): Promise<void> {
   try {
-    const currentViewsQuery = groq`*[_type == "blog" && _id == $blogId][0].views`;
-    const currentViews = await readClient.fetch<number>(currentViewsQuery, {
-      blogId,
-    });
-
-    const updatedViews = currentViews + 1;
-
-    const patchOperation = {
-      set: {
-        views: updatedViews,
-      },
-    };
-
-    await writeClient.transaction().patch(blogId, patchOperation).commit();
+    await writeClient.patch(blogId).inc({ views: 1 }).commit();
   } catch (error) {
-    console.error(error);
+    console.error("Failed to increment views:", error);
     throw error;
   }
 }

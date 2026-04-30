@@ -52,8 +52,8 @@ export default function InputForm<TFormValue extends FieldValues>({
 type InputFormProps<TFormValue extends FieldValues> = {
   name: Path<TFormValue>;
   type: string;
-  rule?: RegisterOptions;
-  error: FieldErrors;
+  rule?: RegisterOptions<TFormValue, Path<TFormValue>>;
+  error: FieldErrors<TFormValue>;
   register: UseFormRegister<TFormValue>;
   placeholder: string;
 };
