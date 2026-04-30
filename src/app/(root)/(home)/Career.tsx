@@ -1,6 +1,6 @@
 "use client";
 import BreakLine from "@/components/elements/BreakLine";
-import { CV_URL } from "@/constants";
+import { RESUME_URL } from "@/constants";
 import { CAREERS_LIST } from "@/constants/home";
 import clsx from "clsx";
 import { motion } from "framer-motion";
@@ -22,7 +22,7 @@ export default function Career() {
       </div>
 
       <Link
-        href={CV_URL}
+        href={RESUME_URL}
         target="_blank"
         rel="noopener noreferrer"
         className={clsx(
@@ -78,7 +78,7 @@ export default function Career() {
                 </Link>{" "}
                 • {career.location}
               </h3>
-              <p className="secondary text-sm lg:text-base">{`${career.startWork} - Present`}</p>
+              <p className="secondary text-sm lg:text-base">{`${career.startWork} - ${career.endWork}`}</p>
             </div>
           </div>
         ))}

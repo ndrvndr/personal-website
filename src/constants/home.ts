@@ -4,6 +4,7 @@ interface CareerList {
   companyName: string;
   location: string;
   startWork: string;
+  endWork: string;
   ariaLabel: string;
 }
 
@@ -15,6 +16,7 @@ export const CAREERS_LIST: CareerList[] = [
     companyName: "Teknologi Digital Terdepan",
     location: "Bandung City",
     startWork: "October 2023",
+    endWork: "May 2026",
     ariaLabel: "Visit the Teknologi Digital Terdepan Company Profile",
   },
 ];
