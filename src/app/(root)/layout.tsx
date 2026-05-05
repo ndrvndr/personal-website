@@ -35,6 +35,9 @@ export const metadata: Metadata = {
     description: DEFAULT_METADATA.description,
     images: DEFAULT_METADATA.image,
   },
+  verification: {
+    google: "S772dC6WeBoxv_eFtjILZPcv1JoLUr_84pZuSGURtPc",
+  },
 };
 
 export default function RootLayout({
