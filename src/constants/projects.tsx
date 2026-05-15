@@ -1,71 +1,30 @@
 import {
-  SiFirebase,
-  SiFlask,
-  SiMongodb,
-  SiNextdotjs,
-  SiPython,
-  SiPytorch,
-  SiReact,
+  SiCloudflare,
+  SiFilament,
+  SiGoogle,
+  SiLaravel,
+  SiNuxt,
+  SiPhp,
+  SiPinia,
+  SiPostgresql,
   SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
 
 const ICON_SIZE: number = 24;
 
-export const TECH_STACK_CHATBOT = [
-  {
-    label: "React",
-    icon: <SiReact size={ICON_SIZE} color="#149FCB" />,
-  },
-  {
-    label: "Tailwind CSS",
-    icon: <SiTailwindcss size={ICON_SIZE} color="#38BDF8" />,
-  },
-  {
-    label: "Python",
-    icon: <SiPython size={ICON_SIZE} color="#FEDE59" />,
-  },
-  {
-    label: "PyTorch",
-    icon: <SiPytorch size={ICON_SIZE} color="#EE4D2D" />,
-  },
-  {
-    label: "Flask",
-    icon: <SiFlask size={ICON_SIZE} color="#63BDC8" />,
-  },
-  {
-    label: "Firebase",
-    icon: <SiFirebase size={ICON_SIZE} color="#FFCA2F" />,
-  },
-];
-
-export const TECH_STACK_X_APP = [
-  {
-    label: "Next.js",
-    icon: <SiNextdotjs />,
-  },
+export const TECH_STACK_E_COMMERCE = [
   {
     label: "TypeScript",
     icon: <SiTypescript size={ICON_SIZE} color="#3078C7" />,
   },
   {
-    label: "Tailwind CSS",
-    icon: <SiTailwindcss size={ICON_SIZE} color="#38BDF8" />,
+    label: "Nuxt",
+    icon: <SiNuxt size={ICON_SIZE} color="#00DC83" />,
   },
   {
-    label: "MongoDB Atlas",
-    icon: <SiMongodb size={ICON_SIZE} color="#016949" />,
-  },
-];
-
-export const TECH_STACK_OOPSUM = [
-  {
-    label: "Next.js",
-    icon: <SiNextdotjs />,
-  },
-  {
-    label: "TypeScript",
-    icon: <SiTypescript size={ICON_SIZE} color="#3078C7" />,
+    label: "Pinia",
+    icon: <SiPinia size={ICON_SIZE} color="#FFD04B" />,
   },
   {
     label: "Tailwind CSS",
@@ -73,56 +32,52 @@ export const TECH_STACK_OOPSUM = [
   },
 ];
 
-export const TECH_STACK_COLLOSAL = [
+export const TECH_STACK_E_COMMERCE_ADMIN = [
   {
-    label: "Next.js",
-    icon: <SiNextdotjs />,
+    label: "PHP",
+    icon: <SiPhp size={ICON_SIZE} color="#4E5B92" />,
   },
   {
-    label: "Tailwind CSS",
-    icon: <SiTailwindcss size={ICON_SIZE} color="#38BDF8" />,
+    label: "Laravel",
+    icon: <SiLaravel size={ICON_SIZE} color="#F61400" />,
+  },
+  {
+    label: "Filament",
+    icon: <SiFilament size={ICON_SIZE} color="#FF5F09" />,
+  },
+  {
+    label: "PostgreSQL",
+    icon: <SiPostgresql size={ICON_SIZE} color="#336790" />,
+  },
+  {
+    label: "Google OAuth",
+    icon: <SiGoogle size={ICON_SIZE} color="#F1B708" />,
+  },
+  {
+    label: "Cloudflare R2",
+    icon: <SiCloudflare size={ICON_SIZE} color="#FF5F09" />,
   },
 ];
 
 export const PROJECTCARD_CONTENTS = [
   {
-    url: "https://chatbot-app.pages.dev/",
-    name: "AI Chatbot",
+    url: "https://e-commerce-frontend-zeta-lac.vercel.app",
+    name: "E-Commerce Platform",
     description:
-      "An Indonesian language chatbot with deep learning and NLP, that can answer user questions regarding university enrollment information.",
-    techStack: TECH_STACK_CHATBOT,
+      "A modern, full-featured e-commerce storefront built with Nuxt 4 and Vue 3, powered by a Laravel 13 REST API backend.",
+    techStack: TECH_STACK_E_COMMERCE,
     image:
-      "https://res.cloudinary.com/dqqmzgesp/image/upload/v1697086786/personal-website/projects/chatbot.webp",
-    imageAlt: "AI Chatbot Website Screenshot",
+      "https://res.cloudinary.com/dqqmzgesp/image/upload/v1778866001/e-commerce-platform_ktwufr.webp",
+    imageAlt: "E-Commerce Platform Screenshot",
   },
   {
-    url: "https://x-app-clone.vercel.app/",
-    name: "X App Clone",
+    url: "https://e-commerce-backend-6m2p.onrender.com",
+    name: "E-Commerce Admin Panel",
     description:
-      "This is a project for developing a clone application of X formerly Twitter, although the end result may not be entirely identical to the X application.",
-    techStack: TECH_STACK_X_APP,
+      "A production-ready REST API and admin panel for a modern e-commerce platform, built with Laravel 13, Filament 5, and Cloudflare R2.",
+    techStack: TECH_STACK_E_COMMERCE_ADMIN,
     image:
-      "https://res.cloudinary.com/dqqmzgesp/image/upload/v1697086832/personal-website/projects/x_app_clone.webp",
-    imageAlt: "X App Clone Website Screenshot",
-  },
-  {
-    url: "https://oopsum.vercel.app/",
-    name: "Crypto Platform",
-    description:
-      "Web-3 based crypto trading platform, with real-time data provided by CoinGecko Public API. Designed by Kuldeep Jiyani on Figma.",
-    techStack: TECH_STACK_OOPSUM,
-    image:
-      "https://res.cloudinary.com/dqqmzgesp/image/upload/v1697086833/personal-website/projects/oopsum.webp",
-    imageAlt: "Crypto Trading Platform Website Screenshot",
-  },
-  {
-    url: "https://collosal-landing-page-codedesign-dev.vercel.app/",
-    name: "Collosal",
-    description:
-      "Challenge to create landing page from codedesign.dev. Collosal is a visually stunning landing page designed for a software house company.",
-    techStack: TECH_STACK_COLLOSAL,
-    image:
-      "https://res.cloudinary.com/dqqmzgesp/image/upload/v1697086833/personal-website/projects/collosal.webp",
-    imageAlt: "Collosal Website Screenshot",
+      "https://res.cloudinary.com/dqqmzgesp/image/upload/v1778866001/e-commerce-admin-panel_nfkgpd.webp",
+    imageAlt: "E-Commerce API & Admin Panel Screenshot",
   },
 ];

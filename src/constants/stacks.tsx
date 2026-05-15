@@ -1,6 +1,6 @@
 import { BiLogoPostgresql } from "react-icons/bi";
 import {
-  SiCss3,
+  SiCss,
   SiExpress,
   SiFirebase,
   SiFramer,
@@ -47,7 +47,7 @@ export const STACKS: stacksProps = {
   Redux: <SiRedux size={ICON_SIZE} color="#764BBD" />,
   "React Query": <SiReactquery size={ICON_SIZE} color="#FF4055" />,
   HTML: <SiHtml5 size={ICON_SIZE} color="#F06525" />,
-  CSS: <SiCss3 size={ICON_SIZE} color="#214CE5" />,
+  CSS: <SiCss size={ICON_SIZE} color="#214CE5" />,
   Prisma: <SiPrisma size={ICON_SIZE} color="#2C3648" />,
   "Node JS": <SiNodedotjs size={ICON_SIZE} color="#418A3F" />,
   Github: <SiGithub size={ICON_SIZE} />,

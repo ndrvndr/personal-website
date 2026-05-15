@@ -1,7 +1,6 @@
 import { AiOutlineHome } from "react-icons/ai";
-import { FaRegPaperPlane } from "react-icons/fa";
+import { FaInfo, FaRegPaperPlane } from "react-icons/fa";
 import { GoProjectSymlink } from "react-icons/go";
-import { SiAboutdotme } from "react-icons/si";
 import { TbWriting } from "react-icons/tb";
 
 const ICON_SIZE: number = 24;
@@ -9,7 +8,7 @@ const ICON_SIZE: number = 24;
 export const SIDEBAR_ITEMS = [
   { icon: <AiOutlineHome size={ICON_SIZE} />, pathname: "/", label: "Home" },
   {
-    icon: <SiAboutdotme size={ICON_SIZE} />,
+    icon: <FaInfo size={ICON_SIZE} />,
     pathname: "/about",
     label: "About",
   },
