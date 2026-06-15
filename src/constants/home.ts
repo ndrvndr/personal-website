@@ -11,7 +11,7 @@ interface CareerList {
 export const CAREERS_LIST: CareerList[] = [
   {
     imageUrl:
-      "https://res.cloudinary.com/dqqmzgesp/image/upload/v1711593062/teknologi_digital_terdepan_logo.jpg",
+      "https://res.cloudinary.com/dqqmzgesp/image/upload/v1781510061/tdt_logo.jpg",
     role: "Frontend Developer",
     companyName: "Teknologi Digital Terdepan",
     location: "Bandung City",
