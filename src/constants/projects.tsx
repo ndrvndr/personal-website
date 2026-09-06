@@ -3,15 +3,46 @@ import {
   SiFilament,
   SiGoogle,
   SiLaravel,
+  SiLua,
+  SiNestjs,
+  SiNodedotjs,
   SiNuxt,
   SiPhp,
   SiPinia,
   SiPostgresql,
+  SiRedis,
   SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
 
 const ICON_SIZE: number = 24;
+
+export const TECH_STACK_FLASH_SALE = [
+  {
+    label: "TypeScript",
+    icon: <SiTypescript size={ICON_SIZE} color="#3078C7" />,
+  },
+  {
+    label: "NestJS",
+    icon: <SiNestjs size={ICON_SIZE} color="#E0234E" />,
+  },
+  {
+    label: "Lua",
+    icon: <SiLua size={ICON_SIZE} color="#00007E" />,
+  },
+  {
+    label: "Redis",
+    icon: <SiRedis size={ICON_SIZE} color="#FE4538" />,
+  },
+  {
+    label: "PostgreSQL",
+    icon: <SiPostgresql size={ICON_SIZE} color="#336790" />,
+  },
+  {
+    label: "BullMQ",
+    icon: <SiNodedotjs size={ICON_SIZE} color="#5DAE47" />,
+  },
+];
 
 export const TECH_STACK_E_COMMERCE = [
   {
@@ -60,6 +91,16 @@ export const TECH_STACK_E_COMMERCE_ADMIN = [
 ];
 
 export const PROJECTCARD_CONTENTS = [
+  {
+    url: "https://github.com/ndrvndr/flash-sale-backend",
+    name: "Flash Sale Ticketing Engine",
+    description:
+      "A race-condition-safe flash sale backend built with NestJS and Redis, featuring atomic stock locking, async payment processing via BullMQ, and real Midtrans integration.",
+    techStack: TECH_STACK_FLASH_SALE,
+    image:
+      "https://res.cloudinary.com/dqqmzgesp/image/upload/v1788700201/flash-sale-backend_pcl2qk.webp",
+    imageAlt: "Flash Sale Ticketing Engine Screenshot",
+  },
   {
     url: "https://e-commerce-frontend-zeta-lac.vercel.app",
     name: "E-Commerce Platform",
