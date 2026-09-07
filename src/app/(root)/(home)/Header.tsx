@@ -14,7 +14,7 @@ export default function Header() {
       <Image
         src={PROFILE_PICTURE_URL}
         alt="Image Profile"
-        className="border__color h-11 w-11 rounded-full"
+        className="border__color h-11 w-11 rounded-full object-cover object-top"
         width={100}
         height={100}
       />

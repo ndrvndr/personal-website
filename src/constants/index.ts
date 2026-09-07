@@ -1,7 +1,7 @@
 export const RESUME_URL = "/resume.pdf";
 
 export const PROFILE_PICTURE_URL =
-  "https://res.cloudinary.com/dqqmzgesp/image/upload/v1697030269/personal-website/profileImage.webp";
+  "https://res.cloudinary.com/dqqmzgesp/image/upload/v1781510064/profile-picture_xk09sw.png";
 
 export const BLOG_API_ENDPOINT =
   process.env.NODE_ENV === "production"
